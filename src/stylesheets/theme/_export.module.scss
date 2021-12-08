@@ -10,6 +10,12 @@
 
 //export variables needed for storybook
 :export {
+    // Primary colors
+    ColorPrimaryLight: $theme-color-primary-light;
+    ColorPrimary: $theme-color-primary;
+    ColorPrimaryDark: $theme-color-primary-dark;
+
+    //Typography
     typeMono: $theme-font-type-mono;
     typeSans: $theme-font-type-sans;
     typeSerif: $theme-font-type-serif;

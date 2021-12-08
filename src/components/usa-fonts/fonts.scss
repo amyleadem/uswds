@@ -45,3 +45,12 @@
     font-family:  $project-font-stack-sans;
   }
 } 
+
+.usa-mono {
+  h4,
+  p,
+  span,
+  tt {
+    font-family:  $project-font-stack-mono;
+  }
+} 

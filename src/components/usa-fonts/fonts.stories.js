@@ -1,6 +1,7 @@
 import Component from "./usa-fonts.twig";
 import fontStyles from "../../stylesheets/theme/_export.module.scss";
 
+const TypeMono = fontStyles.typeMono.replace(/["']/g, "");
 const TypeSerif = fontStyles.typeSerif.replace(/["']/g, "");
 const TypeSans = fontStyles.typeSans.replace(/["']/g, "");
 
@@ -63,6 +64,17 @@ export default {
 } 
 
 const Template = (args) => Component(args);
+
+export const Mono = Template.bind({});
+Mono.argTypes = {
+  font_token: {
+    defaultValue: TypeMono,
+  },
+  id: {
+    defaultValue: "mono",
+    table: { disable: false },
+  },
+}
 
 export const SansSerif = Template.bind({});
 SansSerif.argTypes = {
