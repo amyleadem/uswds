@@ -1,5 +1,5 @@
 {% for face in typefaces %}
-<section id="{{ face.id }}" class="usa-section grid-container">
+<section id="{{ face.id }}" class="usa-{{ face.id }} usa-section grid-container">
   <h4 class="usa-heading-alt">{{ face.name }} (<tt>.usa-{{ face.id }}</tt>)</h4>
 
   <div class="grid-row grid-gap">
@@ -7,7 +7,7 @@
       {{ face.description|raw }}
     </div>
 
-    <div class="usa-{{ face.id }} typography-{{ face.id }}-intro tablet:grid-col">
+    <div class="typography-{{ face.id }}-intro tablet:grid-col">
       <span class="text-huge">Aa</span>
       <div>
         <p class="text-tiny">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
@@ -18,31 +18,3 @@
   </div>
 </section>
 {% endfor %}
-
-<style scoped>
-  .text-tiny {
-    margin: 5px initial 0;
-  }
-
-  .text-tiny:first-child {
-    margin-top: 0;
-  }
-
-  .text-huge {
-    font-size: 140px;
-    line-height: 1.05;
-  }
-
-  .text-tiny {
-    font-size: 15px;
-  }
-
-  .typography-serif-intro .text-huge {
-    font-size: 120px;
-    line-height: 1.275;
-  }
-
-  .typography-serif-intro .text-tiny {
-    font-size: 13px;
-  }
-</style>

@@ -1,6 +1,5 @@
 import Component from "./usa-button.twig";
 import {
-  Playground,
   StyleAccentCool,
   StyleAccentWarm,
   StyleBase,
@@ -67,9 +66,13 @@ Unstyled.args = StyleUnstyled;
 
 export const StylePlayground = Template.bind({});
 StylePlayground.argTypes = {
+  playground_mode: {
+    control: { type: 'boolean' },
+    defaultValue: 'true',
+    table: { disable: true }
+  },
   modifier: { table: { disable: true } },
   display_element_states: { table: { disable: true } },
-  
   text: {
     control: { type: 'text' },
     defaultValue: 'Default text',
