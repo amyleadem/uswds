@@ -1,9 +1,13 @@
+{% if 'true' in playground_mode %}
+<div class="playground-mode">
+{% endif %}
+
 <section id="{{ id }}" class="usa-{{ id }} usa-section grid-container">
-  <h4 class="usa-heading-alt">{{ font_name }} (<tt>.usa-{{ id }}</tt>)</h4>
+  <h4 class="usa-heading-alt">{{ font_token }} {% if 'false' in playground_mode %}(<tt>.usa-{{ id }}</tt>){% endif %}</h4>
 
   <div class="grid-row grid-gap">
     <div class="tablet:grid-col">
-      {{ description|raw }}
+      <p>{{ description|raw }}</p>
     </div>
 
     <div class="typography-{{ id }}-intro tablet:grid-col">
@@ -15,4 +19,21 @@
       </div>
     </div>
   </div>
+
+
 </section>
+
+<style>
+  .playground-mode h4,
+  .playground-mode p,
+  .playground-mode span,
+  .playground-mode tt {
+    font-family: {{ font_token }};
+    font-style: {{ font_style }};
+    font-weight: {{ font_weight }};
+  }
+</style>
+{% if 'true' in playground_mode %}
+</div>
+{% endif %}
+

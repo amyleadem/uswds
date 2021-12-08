@@ -32,10 +32,10 @@ false.
 This will set the root font size
 as a specific px value and use px values
 for media queries.
-
 Accepts true or false
 ----------------------------------------
 */
+
 
 $theme-respect-user-font-size: true;
 
@@ -164,13 +164,13 @@ $theme-font-type-icon: false;
 $theme-font-type-lang: false;
 
 // monospace
-$theme-font-type-mono: "roboto-mono";
+$theme-font-type-mono: "roboto mono";
 
 // sans-serif
-$theme-font-type-sans: "source-sans-pro";
+$theme-font-type-sans: "source sans pro web";
 
 // serif
-$theme-font-type-serif: "merriweather";
+$theme-font-type-serif: "merriweather web";
 
 /*
 ----------------------------------------
@@ -420,3 +420,11 @@ $theme-lead-font-family: "heading";
 $theme-lead-font-size: "lg";
 $theme-lead-line-height: 6;
 $theme-lead-measure: 6;
+}
+}
+
+:export {
+  @each $key, $value in $theme-typography {
+    #{unquote($key)}: $value;
+  }
+}

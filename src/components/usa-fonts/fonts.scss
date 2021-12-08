@@ -33,7 +33,7 @@
   p,
   span,
   tt {
-    font-family:  $theme-font-type-serif, serif;
+    font-family:  $project-font-stack-serif;
   }
 }
   
@@ -42,6 +42,6 @@
   p,
   span,
   tt {
-    font-family:  $theme-font-type-sans, sans-serif;
+    font-family:  $project-font-stack-sans;
   }
 } 
