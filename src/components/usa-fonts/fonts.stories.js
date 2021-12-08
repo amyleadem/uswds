@@ -1,11 +1,23 @@
 import Component from "./usa-fonts.twig";
-import Data from "./fonts.json";
+import {
+  StyleSans,
+  StyleSerif
+} from "./content";
 
 export default {
   title: "Tokens/Fonts",
+  argTypes: {
+    font_name: {
+      control: { type: 'text' },
+      defaultValue: "Merriweather",
+    },
+  },
 }
 
 const Template = (args) => Component(args);
 
-export const Default = Template.bind({});
-Default.args = Data;
+export const SansSerif = Template.bind({});
+SansSerif.args = StyleSans;
+
+export const Serif = Template.bind({});
+Serif.args = StyleSerif;
