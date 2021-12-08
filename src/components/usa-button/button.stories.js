@@ -103,6 +103,10 @@ StylePlayground.argTypes = {
     control: { type: 'color' },
     defaultValue: "#005ea2",
   },
+  font_size: {
+    control: { type: 'text' },
+    defaultValue: '1.06rem',
+  },
   border_radius: {
     control: { type: 'text' },
     defaultValue: '.25rem',

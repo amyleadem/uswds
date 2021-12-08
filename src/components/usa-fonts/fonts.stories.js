@@ -10,7 +10,11 @@ export default {
     font_name: {
       control: { type: 'text' },
       defaultValue: "Merriweather",
+      table: { disable: true }
     },
+    id: {
+      table: { disable: true }
+    }
   },
 }
 
