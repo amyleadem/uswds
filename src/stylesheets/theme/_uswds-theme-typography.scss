@@ -420,11 +420,3 @@ $theme-lead-font-family: "heading";
 $theme-lead-font-size: "lg";
 $theme-lead-line-height: 6;
 $theme-lead-measure: 6;
-}
-}
-
-:export {
-  @each $key, $value in $theme-typography {
-    #{unquote($key)}: $value;
-  }
-}
