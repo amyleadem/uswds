@@ -1,5 +1,4 @@
 import Component from "./usa-button.twig";
-import colorTokens from "../../stylesheets/theme/_export.module.scss";
 import {
   StyleAccentCool,
   StyleAccentWarm,
@@ -11,9 +10,6 @@ import {
   StyleSecondary,
   StyleUnstyled,
 } from "./content";
-
-const primary = colorTokens.ColorPrimary;
-const primaryLight = colorTokens.ColorPrimaryLight;
 
 export default {
   title: "Tokens/Button",
