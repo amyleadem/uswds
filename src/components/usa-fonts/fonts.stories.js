@@ -86,10 +86,6 @@ export default {
       defaultValue: '400',
       table: { disable: true }
     },
-    description: {
-      control: { type: 'text' },
-      defaultValue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt varius purus eget feugiat. Pellentesque ultricies mauris eget leo gravida, a viverra ante facilisis. Donec ac varius justo. Sed malesuada faucibus dui, eget euismod ante dictum sit amet. Integer quis congue lacus. Proin et egestas nibh. Nulla efficitur molestie bibendum. Aenean at diam sit amet risus facilisis molestie quis eget metus. Morbi sit amet bibendum lacus. Quisque congue pulvinar tempor. Ut molestie mi nec massa ullamcorper semper.'
-    },
     id: {
       table: { disable: true },
       defaultValue: "sans",
@@ -104,8 +100,8 @@ export default {
 
 const Template = (args) => Component(args);
 
-export const Mono = Template.bind({});
-Mono.argTypes = {
+export const SystemMono = Template.bind({});
+SystemMono.argTypes = {
   font_token_headline: {
     defaultValue: TypeMono,
   },
@@ -118,8 +114,8 @@ Mono.argTypes = {
   },
 }
 
-export const SansSerif = Template.bind({});
-SansSerif.argTypes = {
+export const SystemSansSerif = Template.bind({});
+SystemSansSerif.argTypes = {
   font_token_headline: {
     defaultValue: TypeSans,
   },
@@ -132,8 +128,8 @@ SansSerif.argTypes = {
   },
 }
 
-export const Serif = Template.bind({});
-Serif.argTypes = {
+export const SystemSerif = Template.bind({});
+SystemSerif.argTypes = {
   font_token_headline: {
     defaultValue: TypeSerif,
   },
