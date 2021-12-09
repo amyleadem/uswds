@@ -1,6 +1,6 @@
 {
-  "modifier": "",
   "label": "Skip to main content",
   "href": "#main-content",
-  "focus": false
+  "focus": false,
+  "show_sample_content": false
 }

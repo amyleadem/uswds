@@ -28,29 +28,14 @@
   font-size: 13px;
 }
 
-.usa-serif {
-  h4,
-  p,
-  span,
-  tt {
-    font-family:  $project-font-stack-serif;
-  }
+.usa-serif * {
+  font-family:  $project-font-stack-serif !important;
 }
   
-.usa-sans {
-  h4,
-  p,
-  span,
-  tt {
-    font-family:  $project-font-stack-sans;
-  }
+.usa-sans * {
+  font-family:  $project-font-stack-sans !important;
 } 
 
-.usa-mono {
-  h4,
-  p,
-  span,
-  tt {
-    font-family:  $project-font-stack-mono;
-  }
+.usa-mono * {
+  font-family:  $project-font-stack-mono !important;
 } 

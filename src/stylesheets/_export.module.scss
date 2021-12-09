@@ -2,6 +2,13 @@
 
 //gather all sass theme files
 @import "uswds";
+@import "core/system-tokens";
+
+@each $typeface, $token in $all-typeface-tokens {
+    :export{
+      $typeface: $token;
+    }
+}
 
 //export variables needed for storybook
 :export {

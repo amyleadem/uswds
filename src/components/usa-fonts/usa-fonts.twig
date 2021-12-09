@@ -2,36 +2,38 @@
 <div class="playground-mode">
 {% endif %}
 
-<section id="{{ id }}" class="usa-{{ id }} usa-section grid-container">
-  <h4 class="usa-heading-alt">{{ font_token }} {% if 'false' in playground_mode %}(<tt>.usa-{{ id }}</tt>){% endif %}</h4>
-
-  <div class="grid-row grid-gap">
-    <div class="tablet:grid-col">
-      <p>{{ description|raw }}</p>
-    </div>
-
-    <div class="typography-{{ id }}-intro tablet:grid-col">
-      <span class="text-huge">Aa</span>
-      <div>
-        <p class="text-tiny">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
-        <p class="text-tiny">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
-        <p class="text-tiny">0 1 2 3 4 5 6 7 8 9</p>
-      </div>
-    </div>
-  </div>
-
-
+<section class="usa-prose usa-{{ id }}">
+     {% include '../usa-type-setting/usa-type-setting--font-demo.twig' with {'headline': font_token_headline} %}
 </section>
 
 <style>
-  .playground-mode h4,
-  .playground-mode p,
-  .playground-mode span,
-  .playground-mode tt {
-    font-family: {{ font_token }};
-    font-style: {{ font_style }};
-    font-weight: {{ font_weight }};
+  h1 {
+    text-transform: capitalize;
   }
+
+  .playground-mode a,
+  .playground-mode p,
+  .playground-mode li,
+  .playground-mode span,
+  .playground-mode td,
+  .playground-mode th, 
+  .playground-mode tt {
+    font-family: {{ font_token_body }}!important;
+    font-style: {{ font_style_body }}!important;
+    font-style: {{ font_style_body }}!important;
+  }
+
+  .playground-mode h1,
+  .playground-mode h2,
+  .playground-mode h3,
+  .playground-mode h4,
+  .playground-mode h5,
+  .playground-mode h5 {
+    font-family: {{ font_token_headline }}!important;
+    font-style: {{ font_style_headline }}!important;
+    font-weight: {{ font_weight_headline }}!important;
+  }
+
 </style>
 {% if 'true' in playground_mode %}
 </div>
