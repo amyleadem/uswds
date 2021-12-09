@@ -1,9 +1,9 @@
 import Component from "./usa-fonts.twig";
-import fontStyles from "../../stylesheets/theme/_export.module.scss";
+import typeStyles from "../../stylesheets/_export.module.scss";
 
-const TypeMono = fontStyles.typeMono.replace(/["']/g, "");
-const TypeSerif = fontStyles.typeSerif.replace(/["']/g, "");
-const TypeSans = fontStyles.typeSans.replace(/["']/g, "");
+const TypeMono = typeStyles.typeMono.replace(/["']/g, "");
+const TypeSerif = typeStyles.typeSerif.replace(/["']/g, "");
+const TypeSans = typeStyles.typeSans.replace(/["']/g, "");
 
 export default {
   title: "Tokens/Fonts",

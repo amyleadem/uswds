@@ -1,3 +1,14 @@
-<a class="usa-skipnav {{ focus ? "usa-focus" }}" href="{{ href | default(contentID) }}">
+<a class="usa-skipnav {% if 'true' in focus %}usa-focus{% endif %}" href="{{ href | default(contentID) }}">
   {{ label | default("Skip to main content") }}
 </a>
+
+{% if 'true' in show_sample_content %}
+<main id="main-content">
+  <h1>Sample Content</h1>
+  <p>{{ sample_content }}</p>
+</main>
+
+<div class="usa-grid usa-footer__return-to-top">
+  <a href="#">Return to top</a>
+</div>
+{% endif %}
