@@ -23,9 +23,3 @@
 // Utilities
 // -------------------------------------
 @import "packages/uswds-utilities";
-
-@each $name, $token in $all-typeface-tokens {
-    .usa-#{$name} {
-      font-family: $name;
-    }
-  }

@@ -12,8 +12,8 @@ export default {
   title: "Tokens/Icon List",
   argTypes: {
     img_path: {
-      defaultValue: "../img",
-      table: { disable: true },
+      defaultValue:"../img",
+      table: { disable: true }
     },
     items: {
       table: { disable: true },
@@ -31,3 +31,9 @@ CustomSize.args = ContentCustomSize;
 
 export const CustomSizeWithRichText= Template.bind({});
 CustomSizeWithRichText.args = ContentCustomSizeRich;
+
+export const RichText= Template.bind({});
+RichText.args = ContentRich;
+
+export const CustomSizeSimple = Template.bind({});
+CustomSizeSimple.args = ContentSimple;
