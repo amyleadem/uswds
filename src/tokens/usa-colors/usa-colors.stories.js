@@ -18,17 +18,14 @@ for (let i = 0; i < 10; i++) {
   myObject[colorName] = colorHex;
 };
 
-for (let elements of arrayValues) {
-  console.log(elements);
-};
-
 console.log(myObject);
 
 export default {
   title: "Tokens/Colors",
   argTypes: {
     modifier: {
-      options: Object.keys(myObject),
+      options: myObject,
+      mapping: myObject,
       control: { type: 'select' },
     },
     display_element_states: {
