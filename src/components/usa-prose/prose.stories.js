@@ -1,7 +1,7 @@
 import Component from "../usa-type-setting/usa-type-setting.twig";
 
 export default {
-  title: "Tokens/Prose",
+  title: "Components/Prose",
 }
 
 const Template = (args) => Component(args);

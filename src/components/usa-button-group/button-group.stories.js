@@ -5,7 +5,7 @@ import {
 } from "./content";
 
 export default {
-  title: "Tokens/Button Group",
+  title: "Components/Button Group",
   argTypes: {
     modifier: {
       options: [

@@ -9,7 +9,7 @@ import {
 } from "./content";
 
 export default {
-  title: "Tokens/Icon List",
+  title: "Dev/Icon List",
   argTypes: {
     img_path: {
       defaultValue:"../img",

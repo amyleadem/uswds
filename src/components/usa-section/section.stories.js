@@ -8,7 +8,7 @@ import {
 
 
 export default {
-  title: "Tokens/Section",
+  title: "Components/Section",
   argTypes: {
     modifier: {
       options: [

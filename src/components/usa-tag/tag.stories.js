@@ -6,7 +6,7 @@ import {
 
 
 export default {
-  title: "Tokens/Tag",
+  title: "Components/Tag",
   argTypes: {
     modifier: {
       control: { type: 'select' },

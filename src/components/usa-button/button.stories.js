@@ -12,7 +12,7 @@ import {
 } from "./content";
 
 export default {
-  title: "Tokens/Button",
+  title: "Components/Button",
   argTypes: {
     modifier: {
       options: [
@@ -77,9 +77,19 @@ StylePlayground.argTypes = {
     control: { type: 'text' },
     defaultValue: 'Default text',
   },
-  background_color: {
-    control: { type: 'color' },
-    defaultValue: "#005ea2",
+  background_color_family: {
+    control: { type: 'select' },
+    options: [
+      'blue', 
+      'blue-warm', 
+      'blue-cool', 
+      'green',
+      'green-warm',
+      'usa-button--outline',
+      'usa-button--outline usa-button--inverse',
+      'usa-button--secondary',
+      'usa-button--unstyled',
+    ],
   },
   background_color_hover: {
     control: { type: 'color' },

@@ -7,7 +7,7 @@ import {
 
 
 export default {
-  title: "Tokens/Skip Nav",
+  title: "Components/Skip Nav",
   argTypes: {
     focus: {
       control: { type: 'boolean' },
