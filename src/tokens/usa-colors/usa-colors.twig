@@ -1,9 +1,15 @@
-<div id="list">
-<p>HI I AM COLORS</p>
-</div>
+<section id="color-demo"></section>
+
+{% if color_tokens %}
+<section class="usa-prose margin-top-2">
+    <h1>Hex: {{color_tokens.arg}} {{color_tokens}}</h1>
+</section>
+{% endif %}
 
 <style>
-#list {
-background-color: {{modifier}};
-}
+    #color-demo {
+        background-color: {{color_tokens}};
+        height: 50vh;
+        width: 100%;
+    }
 </style>

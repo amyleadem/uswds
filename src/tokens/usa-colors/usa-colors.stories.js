@@ -2,10 +2,59 @@
 import Component from "./usa-colors.twig";
 import * as data from '../../data/colors';
 
-const myObject = {};
+const Blue = data.Blue.props[0];
 const BlueCool = data.BlueCool.props[0];
+const BlueWarm = data.BlueWarm.props[0];
+const Cyan = data.Cyan.props[0];
+const Gray = data.Gray.props[0];
+const GrayCool = data.GrayCool.props[0];
+const GrayWarm = data.GrayWarm.props[0];
+const Green = data.Green.props[0];
+const GreenCool = data.GreenCool.props[0];
+const GreenWarm = data.GreenWarm.props[0];
+const Indigo= data.Indigo.props[0];
+const IndigoCool = data.IndigoCool.props[0];
+const IndigoWarm = data.IndigoWarm.props[0];
+const Magenta = data.Magenta.props[0];
+const Mint = data.Mint.props[0];
+const MintCool = data.MintCool.props[0];
+const Orange = data.Orange.props[0];
+const OrangeWarm = data.OrangeWarm.props[0];
 const Red= data.Red.props[0];
-const arrFamily = [Red, BlueCool];
+const RedCool = data.RedCool.props[0];
+const RedWarm = data.RedWarm.props[0];
+const Violet = data.Violet.props[0];
+const VioletWarm = data.VioletWarm.props[0];
+const Yellow = data.Yellow.props[0];
+
+const arrFamily = [
+  Blue,
+  BlueCool,
+  BlueWarm,
+  Cyan, 
+  Gray,
+  GrayCool,
+  GrayWarm,
+  Green,
+  GreenCool,
+  GreenWarm,
+  Indigo,
+  IndigoCool,
+  IndigoWarm,
+  Magenta,
+  Mint,
+  MintCool,
+  Orange,
+  OrangeWarm,
+  Red,
+  RedCool,
+  RedWarm,
+  Violet,
+  VioletWarm,
+  Yellow,
+];
+
+const colorList = {};
 
 arrFamily.forEach(family => {
   const colorFamily = family.name;
@@ -23,19 +72,20 @@ arrFamily.forEach(family => {
     const colorHex = colorValues.value;
   
     // print to object to send to modified options
-    myObject[colorName] = colorHex;
+    colorList[colorName] = colorHex;
   };
 });
 
-console.log(myObject);
+console.log(colorList);
 
 export default {
   title: "Tokens/Colors",
   argTypes: {
-    modifier: {
-      options: myObject,
-      mapping: myObject,
+    color_tokens: {
+      options: colorList,
+      mapping: colorList,
       control: { type: 'select' },
+      defaultValue: 'blue-5',
     },
   },
 };
