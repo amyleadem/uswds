@@ -1,24 +1,31 @@
+/* eslint-disable no-console */
 import Component from "./usa-colors.twig";
 import * as data from '../../data/colors';
 
 const myObject = {};
+const BlueCool = data.BlueCool.props[0];
+const Red= data.Red.props[0];
+const arrFamily = [Red, BlueCool];
 
-for (let i = 0; i < 10; i++) {
-  // access color family properties
-  const colorFamily = data.Red.props[0];
+arrFamily.forEach(family => {
+  const colorFamily = family.name;
+  console.log(colorFamily);
 
-  // loop through each value entry
-  const colorValues = colorFamily.value[i];
-
-  // collect the color family name and color grade
-  const colorName = colorFamily.name + "-" + colorValues.name;
-
-  // collect the hex value
-  const colorHex = colorValues.value;
-
-  //print to object to send to modified options
-  myObject[colorName] = colorHex;
-};
+  for (let i = 0; i < 10; i += 1) {
+    // loop through each value entry
+    const colorValues = family.value[i];
+    console.log(`Color value: ${colorValues}`)
+  
+    // collect the color family name and color grade
+    const colorName = `${family.name}-${colorValues.name}`;
+  
+    // collect the hex value
+    const colorHex = colorValues.value;
+  
+    // print to object to send to modified options
+    myObject[colorName] = colorHex;
+  };
+});
 
 console.log(myObject);
 
