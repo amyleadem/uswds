@@ -33,6 +33,9 @@ export default {
       defaultValue: true,
     },
   },
+  parameters: {
+    layout: 'centered',
+  }
 };
 
 const Template = (args) => Component(args);

@@ -61,17 +61,16 @@ arrFamily.forEach(family => {
   console.log(colorFamily);
 
   for (let i = 0; i < 10; i += 1) {
-    // loop through each value entry
+    // loop through each value entry to grab color grade and hex value
     const colorValues = family.value[i];
-    console.log(`Color value: ${colorValues}`)
   
-    // collect the color family name and color grade
+    // Color name =  color family - color grade
     const colorName = `${family.name}-${colorValues.name}`;
   
-    // collect the hex value
+    // collect the hex value of the entry
     const colorHex = colorValues.value;
   
-    // print to object to send to modified options
+    // print item and hex value to colorList
     colorList[colorName] = colorHex;
   };
 });
@@ -82,10 +81,10 @@ export default {
   title: "Tokens/Colors",
   argTypes: {
     color_tokens: {
+      name: 'USWDS Color Tokens',
       options: colorList,
       mapping: colorList,
       control: { type: 'select' },
-      defaultValue: 'blue-5',
     },
   },
 };
