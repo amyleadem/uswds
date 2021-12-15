@@ -1,4 +1,6 @@
 import Component from "./usa-button.twig";
+import SystemColorList from '../../tokens/usa-colors/usa-colors~system';
+
 import {
   StyleAccentCool,
   StyleAccentWarm,
@@ -83,22 +85,15 @@ StylePlayground.argTypes = {
     defaultValue: 'Default text',
   },
   background_color_family: {
-    control: { type: 'select' },
-    options: [
-      'blue', 
-      'blue-warm', 
-      'blue-cool', 
-      'green',
-      'green-warm',
-      'usa-button--outline',
-      'usa-button--outline usa-button--inverse',
-      'usa-button--secondary',
-      'usa-button--unstyled',
-    ],
+    table: { disable: true }
+
   },
   background_color_hover: {
-    control: { type: 'color' },
-    defaultValue: "#1a4480",
+    control: { type: 'select' },
+    defaultValue: 'blue-warm-70',
+    mapping: SystemColorList,
+    name: 'Background color: hover',
+    options: SystemColorList,
   },
   background_color_active: {
     control: { type: 'color' },

@@ -1,8 +1,9 @@
 //export theme variables to make it accessible to JS
 
 //gather all sass theme files
-@import "uswds";
-@import "core/system-tokens";
+@import "theme/uswds-theme-color";
+@import "theme/uswds-theme-typography";
+
 
 :export {
     // Primary colors
