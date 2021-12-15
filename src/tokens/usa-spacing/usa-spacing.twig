@@ -1,17 +1,12 @@
 <section class="usa-prose margin-top-2">
   <h1>
-    Spacing Units
+    Column Gap
   </h1>
-  <p class="usa-intro">
-    USWDS organizes its colors tokens into theme tokens, state tokens, and
-    system tokens.
-  </p>
-  <p>USWDS spacing unit tokens are based on multiples of 8px, with additional tokens for small sizes, named tokens for large sizes, and a more limited selection of negative tokens.</p>
 </section>
 
 <section>
   <div class="grid-row {{ grid_gap }} width-full margin-top-2">
-  {% set k = item_count %}
+    {% set k = item_count %}
     {% for i in range(1, k) %}
       <div class="grid-col flex-1">
         <div class="height-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105"></div>

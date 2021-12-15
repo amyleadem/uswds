@@ -1,6 +1,6 @@
 <section class="usa-prose margin-top-2">
   <h1>
-    Color tokens
+    {{ token_type }} color tokens
   </h1>
   <p class="usa-intro">
     USWDS organizes its colors tokens into theme tokens, state tokens, and
@@ -13,15 +13,15 @@
 
 <section class="usa-section margin-top-2" id="color-demo"></section>
 
-{% if system_tokens %}
+{% if system_colors %}
   <section class="usa-prose margin-top-2">
     <h1>
-      Hex: {{ system_tokens.arg }} {{ system_tokens }}
+      Hex: {{ system_colors.arg }} {{ system_colors }}
     </h1>
   </section>
 {% endif %}
 
 <style>
-  #color-demo { background-color: {{ system_tokens }}; height: 50vh; width:
+  #color-demo { background-color: {{ system_colors }}; height: 50vh; width:
   100%; }
 </style>
