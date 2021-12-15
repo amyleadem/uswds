@@ -4,13 +4,6 @@
 @import "uswds";
 @import "core/system-tokens";
 
-//export variables needed for storybook
-@each $typeface, $token in $all-typeface-tokens {
-    :export{
-      $typeface: $token;
-    }
-}
-
 :export {
     // Primary colors
     ColorPrimaryLight: $theme-color-primary-light;

@@ -14,9 +14,13 @@ import {
 export default {
   title: "Components/Button",
   argTypes: {
+    text: {
+      name: 'Custom button text',
+    },
     modifier: {
+      name: 'Class modifier',
       options: [
-        'usa-button', 
+        ' ', 
         'usa-button--accent-cool', 
         'usa-button--accent-warm', 
         'usa-button--base',
@@ -29,13 +33,11 @@ export default {
       control: { type: 'select' },
     },
     display_element_states: {
+      name: 'Display all button states',
       control: { type: 'boolean' },
       defaultValue: true,
     },
   },
-  parameters: {
-    layout: 'centered',
-  }
 };
 
 const Template = (args) => Component(args);

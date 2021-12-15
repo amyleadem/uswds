@@ -1,24 +1,27 @@
 <section class="usa-prose margin-top-2">
-    <h1>Color tokens</h1>
-    <p class="usa-intro">USWDS organizes its colors tokens into theme tokens, state tokens, and system tokens.</p> 
-    {% if not color_tokens %}
-    <p>Select a color from the controls below:</p>
-    {% endif %}
-    </p>
+  <h1>
+    Color tokens
+  </h1>
+  <p class="usa-intro">
+    USWDS organizes its colors tokens into theme tokens, state tokens, and
+    system tokens.
+  </p>
+  <p>
+    Preview the tokens by selecting a color value from the controls below:
+  </p>
 </section>
 
 <section class="usa-section margin-top-2" id="color-demo"></section>
 
-{% if color_tokens %}
-<section class="usa-prose margin-top-2">
-    <h1>Hex: {{color_tokens.arg}} {{color_tokens}}</h1>
-</section>
+{% if system_tokens %}
+  <section class="usa-prose margin-top-2">
+    <h1>
+      Hex: {{ system_tokens.arg }} {{ system_tokens }}
+    </h1>
+  </section>
 {% endif %}
 
 <style>
-    #color-demo {
-        background-color: {{color_tokens}};
-        height: 50vh;
-        width: 100%;
-    }
+  #color-demo { background-color: {{ system_tokens }}; height: 50vh; width:
+  100%; }
 </style>

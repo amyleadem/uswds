@@ -80,16 +80,19 @@ console.log(colorList);
 export default {
   title: "Tokens/Colors",
   argTypes: {
-    color_tokens: {
-      name: 'USWDS Color Tokens',
+    system_tokens: {
+      name: 'System Color Tokens',
       options: colorList,
       mapping: colorList,
       control: { type: 'select' },
     },
+  },
+  parameters: {
+    layout: 'fullscreen',
   },
 };
 
 
 const Template = (args) => Component(args);
 
-export const Default = Template.bind({});
+export const ColorTokens = Template.bind({});
