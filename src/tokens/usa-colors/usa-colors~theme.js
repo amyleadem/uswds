@@ -55,29 +55,20 @@ const arrFamily = [
 const SystemColorList = {};
 
 arrFamily.forEach(family => {
-  for (let i = 0; i < 11; i += 1) {
+  for (let i = 0; i < 10; i += 1) {
     // loop through each value entry to grab color grade and hex value
     const colorFamily = family.name;
-    const colorValue = family.value[i];
-    const colorGrade = colorValue.name;
+    const colorValues = family.value[i];
+    const colorGrade = colorValues.name;
 
     // Color name =  color family - color grade
     const tokenName = `${colorFamily}-${colorGrade}`;
   
     // collect the hex value of the entry
-    const hex = colorValue.value;
-
+    const hex = colorValues.value;
+  
     // print item and hex value to colorList
-    if(i <= 9) {
-        SystemColorList[tokenName] =  hex;
-    } 
-    // find vivid values
-    else if (i === 10) {
-        for (let j = 0; j < 10; j += 1) {
-            console.log(tokenName + j);
-        }
-    }
-    
+    SystemColorList[tokenName] =  hex;
   };
 });
 

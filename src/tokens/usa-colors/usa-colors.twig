@@ -7,16 +7,20 @@
     system tokens.
   </p>
   <p>
-    Preview the tokens by selecting a color value from the controls below:
+    Preview {{ token_type }} color tokens by selecting a color value from the controls below:
   </p>
 </section>
+
+{% if color_grid %}
+
+{% endif %}
 
 <section class="usa-section margin-top-2" id="color-demo"></section>
 
 {% if system_colors %}
   <section class="usa-prose margin-top-2">
     <h1>
-      Hex: {{ system_colors.arg }} {{ system_colors }}
+      Hex: {{ system_colors }}
     </h1>
   </section>
 {% endif %}

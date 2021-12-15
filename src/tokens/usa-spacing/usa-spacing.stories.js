@@ -13,10 +13,27 @@ export default {
         'grid-gap-lg',
       ],
     },
-    item_count: {
+    margin_top: {
+      control: { type: 'select' },
+      defaultValue: 'margin-top-2',
+      name: 'Top margin modifier',
+      options: [
+        'margin-top-1',
+        'margin-top-2',
+        'margin-top-3',
+        'margin-top-4',
+        'margin-top-5',
+        'margin-top-6',
+      ],
+    },
+    column_count: {
       control: { type: 'range', min: 1, max: 12, step: 1 },
       name: 'Column count',
-    }
+    },
+    row_count: {
+      control: { type: 'range', min: 1, max: 6, step: 1 },
+      name: 'Column count',
+    },
   },
   parameters: {
     layout: 'fullscreen',
@@ -25,4 +42,4 @@ export default {
 
 const Template = (args) => Component(args);
 
-export const ColumnGap = Template.bind({});
+export const Default = Template.bind({});

@@ -1,5 +1,6 @@
 import Component from "./usa-fonts.twig";
 import typeStyles from "../../stylesheets/_export.module.scss";
+import FontWeightList from "./usa-fonts~weights";
 
 const TypeMono = typeStyles.typeMono.replace(/["']/g, "");
 const TypeSerif = typeStyles.typeSerif.replace(/["']/g, "");
@@ -32,19 +33,10 @@ export default {
       table: { disable: true }
     },
     font_weight_headline: {
-      options: [
-        '100',
-        '200',
-        '300',
-        '400',
-        '500',
-        '600',
-        '700',
-        '800',
-        '900',
-      ],
       control: { type: 'select' },
       defaultValue: '600',
+      mapping: FontWeightList,
+      options: FontWeightList,
       table: { disable: true }
     },
     font_token_body: {

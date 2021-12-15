@@ -15,6 +15,10 @@ export default {
       control: { type: 'text' },
       defaultValue: 'System',
       table: { disable: true },
+    },
+    color_grid: {
+      control: {type: 'boolean'},
+      defaultValue: true,
     }
   },
   parameters: {
@@ -25,5 +29,11 @@ export default {
 
 const Template = (args) => Component(args);
 
-export const SystemColorTokens = Template.bind({});
+export const Default = Template.bind({});
 
+export const SystemColorTokens = Template.bind({});
+SystemColorTokens.argTypes = {
+  color_grid: {
+    defaultValue: false,
+  }
+}
