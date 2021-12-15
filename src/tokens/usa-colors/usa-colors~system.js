@@ -1,3 +1,4 @@
+import { connectableObservableDescriptor } from 'rxjs/observable/ConnectableObservable';
 import * as data from '../../data/colors';
 
 const Blue = data.Blue.props[0];
@@ -60,7 +61,8 @@ arrFamily.forEach(family => {
     const colorFamily = family.name;
     const colorValue = family.value[i];
     const colorGrade = colorValue.name;
-
+    const vivid = "vivid";
+    
     // Color name =  color family - color grade
     const tokenName = `${colorFamily}-${colorGrade}`;
   
@@ -68,16 +70,11 @@ arrFamily.forEach(family => {
     const hex = colorValue.value;
 
     // print item and hex value to colorList
-    if(i <= 9) {
-        SystemColorList[tokenName] =  hex;
-    } 
-    // find vivid values
-    else if (i === 10) {
-        for (let j = 0; j < 10; j += 1) {
-            console.log(tokenName + j);
-        }
+    SystemColorList[tokenName] =  hex;
+
+    if(tokenName.indexOf(vivid) !== -1){
+        console.log("is vivid");
     }
-    
   };
 });
 
