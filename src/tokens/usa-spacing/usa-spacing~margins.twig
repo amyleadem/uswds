@@ -1,0 +1,33 @@
+<section class="usa-prose margin-top-2">
+  <h1>
+    Vertical margins
+  </h1>
+</section>
+
+<section>
+  <div class="grid-row {{ grid_gap }} width-full margin-top-2">
+    {% set k = item_count %}
+    {% for i in range(1, k) %}
+      <div class="grid-col flex-1">
+        <div class="height-10 width-full display-flex flex-align-center bg-secondary-light flex-justify-center padding-x-105"></div>
+      </div> 
+    {% endfor %}
+  </div>
+</section>
+
+
+{% if system_tokens %}
+  <section class="usa-prose margin-top-2">
+    <h1>
+      Spacing unit: {{ system_tokens.arg }} {{ system_tokens }}
+    </h1>
+  </section>
+{% endif %}
+
+<style>
+  #color-demo { 
+    background-color: {{ system_tokens }}; 
+    height: 50vh; 
+    width: 100%; 
+  }
+</style>

@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import Component from "./usa-colors.twig";
+import styleExports from "../../stylesheets/_export.module.scss";
 import SystemColorList from './usa-colors~system';
 
 export default {
@@ -26,10 +27,7 @@ export default {
   },
 };
 
-
 const Template = (args) => Component(args);
-
-export const Default = Template.bind({});
 
 export const SystemColorTokens = Template.bind({});
 SystemColorTokens.argTypes = {

@@ -8,6 +8,7 @@ export default {
       defaultValue: 'grid-gap-md',
       name: 'Theme grid gap modifiers',
       options: [
+        '[null]',
         'grid-gap-sm',
         'grid-gap-md',
         'grid-gap-lg',
@@ -18,6 +19,7 @@ export default {
       defaultValue: 'margin-top-2',
       name: 'Top margin modifier',
       options: [
+        '[null]',
         'margin-top-1',
         'margin-top-2',
         'margin-top-3',
@@ -32,7 +34,7 @@ export default {
     },
     row_count: {
       control: { type: 'range', min: 1, max: 6, step: 1 },
-      name: 'Column count',
+      name: 'Row count',
     },
   },
   parameters: {

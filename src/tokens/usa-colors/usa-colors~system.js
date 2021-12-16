@@ -1,4 +1,4 @@
-import { connectableObservableDescriptor } from 'rxjs/observable/ConnectableObservable';
+// Gather data from system json files
 import * as data from '../../data/colors';
 
 const Blue = data.Blue.props[0];
@@ -53,15 +53,15 @@ const arrFamily = [
   Yellow,
 ];
 
+// create an object that contains all system colors
 const SystemColorList = {};
 
+// loop through each value entry to grab color grade and hex value\
 arrFamily.forEach(family => {
-  for (let i = 0; i < 11; i += 1) {
-    // loop through each value entry to grab color grade and hex value
+  for (let i = 0; i < 10; i += 1) {
     const colorFamily = family.name;
     const colorValue = family.value[i];
     const colorGrade = colorValue.name;
-    const vivid = "vivid";
     
     // Color name =  color family - color grade
     const tokenName = `${colorFamily}-${colorGrade}`;
@@ -71,10 +71,6 @@ arrFamily.forEach(family => {
 
     // print item and hex value to colorList
     SystemColorList[tokenName] =  hex;
-
-    if(tokenName.indexOf(vivid) !== -1){
-        console.log("is vivid");
-    }
   };
 });
 
