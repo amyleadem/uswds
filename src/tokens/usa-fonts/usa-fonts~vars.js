@@ -8,8 +8,8 @@ export const systemFontFamily = {
     'georgia': 'Georgia',
     'helvetica': 'Helvetica Neue',
     'merriweather': 'Merriweather Web',
-    'open-sans': 'Open Sans',
-    'public-sans': 'Public Sans Web',
+    //'open-sans': 'Open Sans',
+    //'public-sans': 'Public Sans Web',
     'roboto-mono': 'Roboto Mono Web',
     'source-sans-pro': 'Source Sans Pro Web',
     'system': 'null',
@@ -33,3 +33,4 @@ export const systemFontWeight = [
     '800',
     '900',
 ]
+

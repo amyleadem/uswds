@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
 import Component from "./usa-colors.twig";
-import styleExports from "../../stylesheets/_export.module.scss";
-import SystemColorList from './usa-colors~system';
+import SystemColorList from './usa-colors~vars';
 
 export default {
   title: "Tokens/Colors",
   argTypes: {
     system_colors: {
       control: { type: 'select' },
+      defaultValue: 'blue-5',
       mapping: SystemColorList,
       name: 'System Color Tokens',
       options: SystemColorList,

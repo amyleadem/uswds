@@ -1,5 +1,5 @@
 import Component from "./usa-button.twig";
-import SystemColorList from '../../tokens/usa-colors/usa-colors~system';
+import SystemColorList from '../../tokens/usa-colors/usa-colors~vars';
 
 import {
   StyleAccentCool,
@@ -116,14 +116,14 @@ StylePlayground.argTypes = {
     control: { type: 'select' },
     defaultValue: 'blue-warm-70',
     mapping: SystemColorList,
-    name: 'Active background color',
+    name: 'Active state: background color',
     options: SystemColorList,
   },
   background_color_disabled: {
     control: { type: 'select' },
     defaultValue: 'blue-warm-70',
     mapping: SystemColorList,
-    name: 'Disabled background color',
+    name: 'Disabled state: background color',
     options: SystemColorList,
   },
   
@@ -131,7 +131,7 @@ StylePlayground.argTypes = {
     control: { type: 'select' },
     defaultValue: 'blue-warm-70',
     mapping: SystemColorList,
-    name: 'Background color - Unstyled',
+    name: 'Color - Unstyled',
     options: SystemColorList,
   },
   font_size: {

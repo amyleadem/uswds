@@ -1,5 +1,5 @@
 import Component from "./usa-fonts.twig";
-import * as fontStyles from "./usa-fonts~typeface";
+import * as fontStyles from "./usa-fonts~vars";
 
 export default {
   title: "Tokens/Fonts",
@@ -26,6 +26,12 @@ export default {
       options: fontStyles.systemFontWeight,
       table: { disable: true }
     },
+    typescale_h1: {
+      control: { type: 'range', min: 1, max: 20, step: 1 },
+      defaultValue: 14,
+      name: 'H1 type scale',
+      table: { disable: true }
+    },
     font_token_body: {
       control: { type: 'select' },
       defaultValue: 'Source Sans Pro Web',
@@ -49,8 +55,8 @@ export default {
       table: { disable: true }
     },
     id: {
-      name: 'Theme font family',
       defaultValue: "sans",
+      name: 'Theme font family',
       table: { disable: true },
     },
     playground_mode: {
@@ -73,7 +79,6 @@ SystemMono.argTypes = {
   },
   id: {
     defaultValue: "mono",
-    table: { disable: false },
   },
 }
 
@@ -87,7 +92,6 @@ SystemSansSerif.argTypes = {
   },
   id: {
     defaultValue: "sans",
-    table: { disable: false },
   },
 }
 
@@ -101,7 +105,6 @@ SystemSerif.argTypes = {
   },
   id: {
     defaultValue: "serif",
-    table: { disable: false },
   },
 }
 
