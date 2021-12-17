@@ -17,10 +17,6 @@ export default {
       defaultValue: 'System',
       table: { disable: true },
     },
-    color_grid: {
-      control: {type: 'boolean'},
-      defaultValue: true,
-    }
   },
   parameters: {
     layout: 'fullscreen',
@@ -30,8 +26,3 @@ export default {
 const Template = (args) => Component(args);
 
 export const SystemColorTokens = Template.bind({});
-SystemColorTokens.argTypes = {
-  color_grid: {
-    defaultValue: false,
-  }
-}

@@ -17,6 +17,7 @@ export default {
   title: "Components/Button",
   argTypes: {
     text: {
+      defaultValue: 'Default',
       name: 'Custom button text',
     },
     modifier: {
@@ -38,6 +39,11 @@ export default {
       name: 'Display all button states',
       control: { type: 'boolean' },
       defaultValue: true,
+    },
+    playground_mode: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+      table: { disable: true }
     },
   },
 };
@@ -73,56 +79,54 @@ Unstyled.args = StyleUnstyled;
 
 export const StylePlayground = Template.bind({});
 StylePlayground.argTypes = {
-  playground_mode: {
-    control: { type: 'boolean' },
-    defaultValue: 'true',
-    table: { disable: true }
+  playground_mode: { 
+    defaultValue: true,
   },
-  modifier: { table: { disable: true } },
-  display_element_states: { table: { disable: true } },
-  text: {
-    control: { type: 'text' },
-    defaultValue: 'Default text',
+  modifier: { 
+    table: { disable: true },
+  },
+  display_element_states: { 
+    table: { disable: true },
   },
   background_color_family: {
     table: { disable: true }
-
+  },
+  text_color: {
+    control: { type: 'select' }, 
+    defaultValue: 'white',
+    mapping: SystemColorList,
+    name: 'Default state: text color',
+    options: SystemColorList,
   },
   background_color_hover: {
     control: { type: 'select' },
     defaultValue: 'blue-warm-70',
     mapping: SystemColorList,
-    name: 'Background color: hover',
-    options: SystemColorList,
-  },
-  background_color_active: {
-    control: { type: 'select' },
-    defaultValue: 'blue-warm-70',
-    mapping: SystemColorList,
-    name: 'Background color: hover',
-    options: SystemColorList,
-  },
-  background_color_disabled: {
-    control: { type: 'select' },
-    defaultValue: 'blue-warm-70',
-    mapping: SystemColorList,
-    name: 'Background color: hover',
-    options: SystemColorList,
-  },
-  text_color: {
-    control: { type: 'select' },
-    defaultValue: 'white',
-    mapping: SystemColorList,
-    name: 'Text color',
+    name: 'Hover state: background color',
     options: SystemColorList,
   },
   text_color_hover: {
     control: { type: 'select' },
     defaultValue: 'white',
     mapping: SystemColorList,
-    name: 'Text color: hover',
+    name: 'Hover state: text color',
     options: SystemColorList,
   },
+  background_color_active: {
+    control: { type: 'select' },
+    defaultValue: 'blue-warm-70',
+    mapping: SystemColorList,
+    name: 'Active background color',
+    options: SystemColorList,
+  },
+  background_color_disabled: {
+    control: { type: 'select' },
+    defaultValue: 'blue-warm-70',
+    mapping: SystemColorList,
+    name: 'Disabled background color',
+    options: SystemColorList,
+  },
+  
   text_color_unstyled: {
     control: { type: 'select' },
     defaultValue: 'blue-warm-70',

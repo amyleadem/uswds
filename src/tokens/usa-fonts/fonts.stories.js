@@ -1,86 +1,57 @@
 import Component from "./usa-fonts.twig";
-import typeStyles from "../../stylesheets/_export.module.scss";
-import FontWeightList from "./usa-fonts~weights";
-
-const TypeMono = typeStyles.typeMono.replace(/["']/g, "");
-const TypeSerif = typeStyles.typeSerif.replace(/["']/g, "");
-const TypeSans = typeStyles.typeSans.replace(/["']/g, "");
+import * as fontStyles from "./usa-fonts~typeface";
 
 export default {
   title: "Tokens/Fonts",
   argTypes: {
     font_token_headline: {
-      options: [
-        'Georgia',
-        'Helvetica Neue',
-        'Merriweather Web',
-        'Roboto Mono Web',
-        'Source Sans Pro Web',
-        'Tahoma',
-        'Verdana',
-      ],
       control: { type: 'select' },
       defaultValue: 'Merriweather Web',
+      mapping: fontStyles.systemFontFamily,
+      name: 'Headline - font family token',
+      options: fontStyles.systemFontFamily,
       table: { disable: true },
     },
     font_style_headline: {
-      options: [
-        'normal',
-        'italic',
-      ],
       control: { type: 'select' },
       defaultValue: 'normal',
-      table: { disable: true }
+      name: 'Headline - font style',
+      options: fontStyles.systemFontStyle,
+      table: { disable: true },
     },
     font_weight_headline: {
       control: { type: 'select' },
       defaultValue: '600',
-      mapping: FontWeightList,
-      options: FontWeightList,
+      name: 'Headline - font style',
+      options: fontStyles.systemFontWeight,
       table: { disable: true }
     },
     font_token_body: {
-      options: [
-        'Georgia',
-        'Helvetica Neue',
-        'Merriweather Web',
-        'Roboto Mono Web',
-        'Source Sans Pro Web',
-        'Tahoma',
-        'Verdana',
-      ],
       control: { type: 'select' },
       defaultValue: 'Source Sans Pro Web',
+      mapping: fontStyles.systemFontFamily,
+      name: 'Body - font family token',
+      options: fontStyles.systemFontFamily,
       table: { disable: true },
     },
     font_style_body: {
-      options: [
-        'normal',
-        'italic',
-      ],
       control: { type: 'select' },
       defaultValue: 'normal',
-      table: { disable: true }
+      name: 'Body - font style',
+      options: fontStyles.systemFontStyle,
+      table: { disable: true },
     },
     font_weight_body: {
-      options: [
-        '100',
-        '200',
-        '300',
-        '400',
-        '500',
-        '600',
-        '700',
-        '800',
-        '900',
-      ],
       control: { type: 'select' },
       defaultValue: '400',
+      name: 'Body - font weight',
+      options: fontStyles.systemFontWeight,
       table: { disable: true }
     },
     id: {
-      table: { disable: true },
+      name: 'Theme font family',
       defaultValue: "sans",
+      table: { disable: true },
     },
     playground_mode: {
       control: { type: 'boolean' },
@@ -95,10 +66,10 @@ const Template = (args) => Component(args);
 export const SystemMono = Template.bind({});
 SystemMono.argTypes = {
   font_token_headline: {
-    defaultValue: TypeMono,
+    defaultValue: fontStyles.TypeMono,
   },
   font_token_body: {
-    defaultValue: TypeMono,
+    defaultValue: fontStyles.TypeMono,
   },
   id: {
     defaultValue: "mono",
@@ -109,10 +80,10 @@ SystemMono.argTypes = {
 export const SystemSansSerif = Template.bind({});
 SystemSansSerif.argTypes = {
   font_token_headline: {
-    defaultValue: TypeSans,
+    defaultValue: fontStyles.TypeSans,
   },
   font_token_body: {
-    defaultValue: TypeSans,
+    defaultValue: fontStyles.TypeSans,
   },
   id: {
     defaultValue: "sans",
@@ -123,10 +94,10 @@ SystemSansSerif.argTypes = {
 export const SystemSerif = Template.bind({});
 SystemSerif.argTypes = {
   font_token_headline: {
-    defaultValue: TypeSerif,
+    defaultValue: fontStyles.TypeSerif,
   },
   font_token_body: {
-    defaultValue: TypeSerif,
+    defaultValue: fontStyles.TypeSerif,
   },
   id: {
     defaultValue: "serif",
