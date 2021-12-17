@@ -17,6 +17,7 @@ export default {
   title: "Components/Button",
   argTypes: {
     text: {
+      control: { type: 'text' },
       defaultValue: 'Default',
       name: 'Custom button text',
     },
@@ -39,11 +40,6 @@ export default {
       name: 'Display all button states',
       control: { type: 'boolean' },
       defaultValue: true,
-    },
-    playground_mode: {
-      control: { type: 'boolean' },
-      defaultValue: false,
-      table: { disable: true }
     },
   },
 };
@@ -79,8 +75,10 @@ Unstyled.args = StyleUnstyled;
 
 export const StylePlayground = Template.bind({});
 StylePlayground.argTypes = {
-  playground_mode: { 
-    defaultValue: true,
+  playground_mode: {
+    control: { type: 'boolean' },
+    defaultValue: 'true',
+    table: { disable: true }
   },
   modifier: { 
     table: { disable: true },
@@ -88,13 +86,15 @@ StylePlayground.argTypes = {
   display_element_states: { 
     table: { disable: true },
   },
-  background_color_family: {
-    table: { disable: true }
+  background_color: {
+    control: { type: 'select' }, 
+    defaultValue: 'blue-60v',
+    name: 'Default state: background color',
+    options: SystemColorList,
   },
   text_color: {
     control: { type: 'select' }, 
     defaultValue: 'white',
-    mapping: SystemColorList,
     name: 'Default state: text color',
     options: SystemColorList,
   },
@@ -119,6 +119,13 @@ StylePlayground.argTypes = {
     name: 'Active state: background color',
     options: SystemColorList,
   },
+  text_color_active: {
+    control: { type: 'select' },
+    defaultValue: 'white',
+    mapping: SystemColorList,
+    name: 'Active state: text color',
+    options: SystemColorList,
+  },
   background_color_disabled: {
     control: { type: 'select' },
     defaultValue: 'blue-warm-70',
@@ -126,30 +133,39 @@ StylePlayground.argTypes = {
     name: 'Disabled state: background color',
     options: SystemColorList,
   },
-  
+  text_color_disabled: {
+    control: { type: 'select' },
+    defaultValue: 'white',
+    mapping: SystemColorList,
+    name: 'Disabled state: text color',
+    options: SystemColorList,
+  },
   text_color_unstyled: {
     control: { type: 'select' },
     defaultValue: 'blue-warm-70',
     mapping: SystemColorList,
-    name: 'Color - Unstyled',
+    name: 'Unstyled: text color',
     options: SystemColorList,
   },
   font_size: {
     control: { type: 'text' },
     defaultValue: '1.06rem',
+    name: 'Type scale',
   },
   border_radius: {
     control: { type: 'text' },
     defaultValue: '.25rem',
+    name: 'Border radius (unit needed)',
   },
   border_width: {
     control: { type: 'text' },
-    defaultValue: '0',
+    defaultValue: '2px',
+    name: 'Border Width (unit needed)',
   },
   border_color: {
-    control: { type: 'color' },
-  },
-  border_color_hover: {
-    control: { type: 'color' },
+    control: { type: 'select' },
+    mapping: SystemColorList,
+    name: 'Border Color',
+    options: SystemColorList,
   },
 }

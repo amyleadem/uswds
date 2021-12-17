@@ -22,7 +22,7 @@ export default {
     font_weight_headline: {
       control: { type: 'select' },
       defaultValue: '600',
-      name: 'Headline - font style',
+      name: 'Headline - font weight',
       options: fontStyles.systemFontWeight,
       table: { disable: true }
     },
@@ -69,8 +69,8 @@ export default {
 
 const Template = (args) => Component(args);
 
-export const SystemMono = Template.bind({});
-SystemMono.argTypes = {
+export const ThemeMono = Template.bind({});
+ThemeMono.argTypes = {
   font_token_headline: {
     defaultValue: fontStyles.TypeMono,
   },
@@ -82,8 +82,8 @@ SystemMono.argTypes = {
   },
 }
 
-export const SystemSansSerif = Template.bind({});
-SystemSansSerif.argTypes = {
+export const ThemeSansSerif = Template.bind({});
+ThemeSansSerif.argTypes = {
   font_token_headline: {
     defaultValue: fontStyles.TypeSans,
   },
@@ -95,8 +95,8 @@ SystemSansSerif.argTypes = {
   },
 }
 
-export const SystemSerif = Template.bind({});
-SystemSerif.argTypes = {
+export const ThemeSerif = Template.bind({});
+ThemeSerif.argTypes = {
   font_token_headline: {
     defaultValue: fontStyles.TypeSerif,
   },
