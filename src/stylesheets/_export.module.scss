@@ -4,6 +4,14 @@
 @import "theme/uswds-theme-color";
 @import "theme/uswds-theme-typography";
 
+ @mixin export-map($map){
+	@if type-of($map) == map {
+		@each $prop, $value in $map {
+				@include map-to-props($value);
+		}
+	}
+}
+
 :export {
     // Primary colors
     ColorPrimaryLight: $theme-color-primary-light;
@@ -11,10 +19,10 @@
     ColorPrimaryDark: $theme-color-primary-dark;
 
     //Typography
-    typeMono: $theme-font-type-mono;
-    typeSans: $theme-font-type-sans;
-    typeSerif: $theme-font-type-serif;
-    typeScaleLg: $theme-type-scale-lg;
+    fontTypeMono: $theme-font-type-mono;
+    fontTypeSans: $theme-font-type-sans;
+    fontTypeSerif: $theme-font-type-serif;
+    fontTypeScaleLg: $theme-type-scale-lg;
 
     // Font weights
     fontWeightThin: $theme-font-weight-thin;
@@ -25,6 +33,8 @@
     fontWeightBold: $theme-font-weight-bold;
     fontWeightHeavy: $theme-font-weight-heavy;
 
-    // Type scale
-//@include map-to-props($system-type-scale);
+    // Theme Colors
+    @each $prop, $value in $assignments-theme-color {
+      $prop: $value;
+    }
 }

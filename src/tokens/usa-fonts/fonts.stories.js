@@ -1,5 +1,5 @@
 import Component from "./usa-fonts.twig";
-import * as fontStyles from "./usa-fonts~vars";
+import * as fontVars from "./usa-fonts~vars";
 
 export default {
   title: "Tokens/Fonts",
@@ -7,23 +7,23 @@ export default {
     font_token_headline: {
       control: { type: 'select' },
       defaultValue: 'Merriweather Web',
-      mapping: fontStyles.systemFontFamily,
+      mapping: fontVars.systemFontFamily,
       name: 'Headline - font family token',
-      options: fontStyles.systemFontFamily,
+      options: fontVars.systemFontFamily,
       table: { disable: true },
     },
     font_style_headline: {
       control: { type: 'select' },
       defaultValue: 'normal',
       name: 'Headline - font style',
-      options: fontStyles.systemFontStyle,
+      options: fontVars.systemFontStyle,
       table: { disable: true },
     },
     font_weight_headline: {
       control: { type: 'select' },
       defaultValue: '600',
       name: 'Headline - font weight',
-      options: fontStyles.systemFontWeight,
+      options: fontVars.systemFontWeight,
       table: { disable: true }
     },
     typescale_h1: {
@@ -35,23 +35,23 @@ export default {
     font_token_body: {
       control: { type: 'select' },
       defaultValue: 'Source Sans Pro Web',
-      mapping: fontStyles.systemFontFamily,
+      mapping: fontVars.systemFontFamily,
       name: 'Body - font family token',
-      options: fontStyles.systemFontFamily,
+      options: fontVars.systemFontFamily,
       table: { disable: true },
     },
     font_style_body: {
       control: { type: 'select' },
       defaultValue: 'normal',
       name: 'Body - font style',
-      options: fontStyles.systemFontStyle,
+      options: fontVars.systemFontStyle,
       table: { disable: true },
     },
     font_weight_body: {
       control: { type: 'select' },
       defaultValue: '400',
       name: 'Body - font weight',
-      options: fontStyles.systemFontWeight,
+      options: fontVars.systemFontWeight,
       table: { disable: true }
     },
     id: {
@@ -72,10 +72,10 @@ const Template = (args) => Component(args);
 export const ThemeMono = Template.bind({});
 ThemeMono.argTypes = {
   font_token_headline: {
-    defaultValue: fontStyles.TypeMono,
+    defaultValue: fontVars.TypeMono,
   },
   font_token_body: {
-    defaultValue: fontStyles.TypeMono,
+    defaultValue: fontVars.TypeMono,
   },
   id: {
     defaultValue: "mono",
@@ -85,10 +85,10 @@ ThemeMono.argTypes = {
 export const ThemeSansSerif = Template.bind({});
 ThemeSansSerif.argTypes = {
   font_token_headline: {
-    defaultValue: fontStyles.TypeSans,
+    defaultValue: fontVars.TypeSans,
   },
   font_token_body: {
-    defaultValue: fontStyles.TypeSans,
+    defaultValue: fontVars.TypeSans,
   },
   id: {
     defaultValue: "sans",
@@ -98,10 +98,10 @@ ThemeSansSerif.argTypes = {
 export const ThemeSerif = Template.bind({});
 ThemeSerif.argTypes = {
   font_token_headline: {
-    defaultValue: fontStyles.TypeSerif,
+    defaultValue: fontVars.TypeSerif,
   },
   font_token_body: {
-    defaultValue: fontStyles.TypeSerif,
+    defaultValue: fontVars.TypeSerif,
   },
   id: {
     defaultValue: "serif",

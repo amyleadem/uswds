@@ -1,4 +1,4 @@
-// Gather data from system json files
+import exports from "../../stylesheets/_export.module.scss";
 import * as data from '../../data/colors';
 
 const Blue = data.Blue.props[0];
@@ -53,25 +53,28 @@ const arrFamily = [
   Yellow,
 ];
 
-// create an object that contains all system colors
 const SystemColorList = {};
 
-// loop through each value entry to grab color grade and hex value\
 arrFamily.forEach(family => {
   for (let i = 0; i < 10; i += 1) {
+    // loop through each value entry to grab color grade and hex value
     const colorFamily = family.name;
-    const colorValue = family.value[i];
-    const colorGrade = colorValue.name;
-    
+    const colorValues = family.value[i];
+    const colorGrade = colorValues.name;
+
     // Color name =  color family - color grade
     const tokenName = `${colorFamily}-${colorGrade}`;
   
     // collect the hex value of the entry
-    const hex = colorValue.value;
-
+    const hex = colorValues.value;
+  
     // print item and hex value to colorList
     SystemColorList[tokenName] =  hex;
   };
 });
 
 export default SystemColorList;
+
+export const hamburger = exports.base;
+
+console.log(hamburger);
