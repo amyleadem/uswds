@@ -11,23 +11,27 @@
   </p>
 </section>
 
-<section class="usa-section margin-top-2" id="color-demo"></section>
 
-{% if system_colors %}
-  <section class="usa-prose margin-top-2">
-    <h1>
-      Hex: {{ system_colors }}
-    </h1>
-  </section>
+{% if token_type == "system" %}
+  {% if system_colors %}
+    <section class="usa-prose margin-top-2">
+      <h3>
+        {{ system_colors }}
+      </h3>
+    </section>
+    <section class="usa-section margin-top-2" id="color-demo"></section>
+  {% endif %}
 {% endif %}
 
-{% if theme_colors %}
-  <section class="usa-section margin-top-2  bg-{{ theme_colors }}" id="theme-demo"></section>
-  <section class="usa-prose margin-top-2">
-    <h1>
-      Theme color family: {{ theme_colors }}
-    </h1>
-  </section>
+{% if token_type == "theme" %}
+  {% if theme_colors %}
+    <section class="usa-prose margin-top-2">
+      <h3>
+        {{ theme_colors }}
+      </h3>
+    </section>
+    <section class="usa-section margin-top-2  bg-{{ theme_colors }}" id="theme-demo"></section>
+  {% endif %}
 {% endif %}
 
 <style>

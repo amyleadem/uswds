@@ -12,17 +12,22 @@ export default {
       control: { type: 'select' },
       defaultValue: 'blue-5',
       mapping: SystemColorList,
-      name: 'System Color Tokens',
+      name: 'System color tokens',
       options: SystemColorList,
     },
     theme_colors: {
       control: { type: 'select' },
-      name: 'Theme color palette',
+      name: 'Theme color tokens',
       options: ThemeColorList,
+      table: { disable: true },
     },
     token_type: {
-      control: { type: 'text' },
-      defaultValue: 'System',
+      control: { type: 'select' },
+      defaultValue: 'system',
+      options: [
+        'system',
+        'theme',
+      ],
       table: { disable: true },
     },
   },
@@ -34,3 +39,16 @@ export default {
 const Template = (args) => Component(args);
 
 export const SystemColorTokens = Template.bind({});
+
+export const ThemeColorTokens = Template.bind({});
+ThemeColorTokens.argTypes = {
+  token_type: { 
+    defaultValue: 'theme',
+  },
+  system_colors: {
+    table: { disable: true },
+  },
+  theme_colors: {
+    table: { disable: false },
+  }, 
+}
