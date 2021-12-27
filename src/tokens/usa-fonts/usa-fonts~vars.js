@@ -34,3 +34,6 @@ export const systemFontWeight = [
     '900',
 ]
 
+export const systemTypeScale = {
+}
+

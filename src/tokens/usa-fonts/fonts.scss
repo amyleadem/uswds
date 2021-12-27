@@ -2,30 +2,8 @@
   These styles are added for storybook demonstration only
 */
 
-.text-tiny {
-  margin: 5px initial 0;
-}
-
-.text-tiny:first-child {
-  margin-top: 0;
-}
-
-.text-huge {
-  font-size: 140px;
-  line-height: 1.05;
-}
-
-.text-tiny {
-  font-size: 15px;
-}
-
-.typography-serif-intro .text-huge {
-  font-size: 120px;
-  line-height: 1.275;
-}
-
-.typography-serif-intro .text-tiny {
-  font-size: 13px;
+h1 {
+  text-transform: capitalize;
 }
 
 .usa-serif * {

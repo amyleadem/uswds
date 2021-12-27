@@ -2,39 +2,44 @@
 <div class="playground-mode">
 {% endif %}
 
-<section class="usa-prose usa-{{ id }}">
-     {% include '../../components/usa-type-setting/usa-type-setting--font-demo.twig' with {'headline': font_token_headline} %}
-</section>
+  <section class="usa-prose usa-{{ id }} measure-{{ text_width }}">
+      {% include '../../components/usa-type-setting/usa-type-setting--font-demo.twig' with {'headline': font_token_headline} %}
+  </section>
 
-<style>
-  h1 {
-    text-transform: capitalize;
-  }
+  {% if playground_mode %}
+  <style>
+    .playground-mode a,
+    .playground-mode p,
+    .playground-mode li,
+    .playground-mode span,
+    .playground-mode td,
+    .playground-mode th, 
+    .playground-mode tt {
+      font-family: {{ font_token_body }}!important;
+      font-style: {{ font_style_body }}!important;
+      font-weight: {{ font_weight_body }}!important;
+    }
 
-  .playground-mode a,
-  .playground-mode p,
-  .playground-mode li,
-  .playground-mode span,
-  .playground-mode td,
-  .playground-mode th, 
-  .playground-mode tt {
-    font-family: {{ font_token_body }}!important;
-    font-style: {{ font_style_body }}!important;
-    font-weight: {{ font_weight_body }}!important;
-  }
+    .playground-mode h1,
+    .playground-mode h2,
+    .playground-mode h3,
+    .playground-mode h4,
+    .playground-mode h5,
+    .playground-mode h5 {
+      font-family: {{ font_token_headline }}!important;
+      font-style: {{ font_style_headline }}!important;
+      font-weight: {{ font_weight_headline }}!important;
+    }
 
-  .playground-mode h1,
-  .playground-mode h2,
-  .playground-mode h3,
-  .playground-mode h4,
-  .playground-mode h5,
-  .playground-mode h5 {
-    font-family: {{ font_token_headline }}!important;
-    font-style: {{ font_style_headline }}!important;
-    font-weight: {{ font_weight_headline }}!important;
-  }
-</style>
-{% if 'true' in playground_mode %}
+    .playground-mode h1 {
+      font-size: {{typescale_h1 }}!important;
+    }
+
+    .playground-mode .usa-prose > * {
+      max-width: none;
+    }
+  </style>
+
 </div>
 {% endif %}
 

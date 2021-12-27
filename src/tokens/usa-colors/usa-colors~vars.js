@@ -1,4 +1,3 @@
-import exports from "../../stylesheets/_export.module.scss";
 import * as data from '../../data/colors';
 
 const Blue = data.Blue.props[0];
@@ -56,7 +55,7 @@ const arrFamily = [
 const SystemColorList = {};
 
 arrFamily.forEach(family => {
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < 11; i += 1) {
     // loop through each value entry to grab color grade and hex value
     const colorFamily = family.name;
     const colorValues = family.value[i];
@@ -64,17 +63,26 @@ arrFamily.forEach(family => {
 
     // Color name =  color family - color grade
     const tokenName = `${colorFamily}-${colorGrade}`;
-  
+
     // collect the hex value of the entry
     const hex = colorValues.value;
+
+    if (colorGrade === "vivid") {
+      for (let j = 0; j < 10; j += 1) {
+        const colorValuesVivid = family.value[i].value[j];
+        const colorGradeVivid = colorValuesVivid.name;
+        const tokenNameVivid = `${colorFamily}-${colorGradeVivid}v`;
+        const hexVivid = colorValuesVivid.value;
+
+        // print item and hex value to colorList
+        SystemColorList[tokenNameVivid] =  hexVivid;
+      }
+    } else {
+      // print item and hex value to colorList
+      SystemColorList[tokenName] =  hex;
+    }
   
-    // print item and hex value to colorList
-    SystemColorList[tokenName] =  hex;
   };
 });
 
 export default SystemColorList;
-
-export const hamburger = exports.base;
-
-console.log(hamburger);

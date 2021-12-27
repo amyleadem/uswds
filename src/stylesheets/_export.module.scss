@@ -13,16 +13,21 @@
 }
 
 :export {
-    // Primary colors
-    ColorPrimaryLight: $theme-color-primary-light;
-    ColorPrimary: $theme-color-primary;
-    ColorPrimaryDark: $theme-color-primary-dark;
-
     //Typography
+    //Font Type
     fontTypeMono: $theme-font-type-mono;
     fontTypeSans: $theme-font-type-sans;
     fontTypeSerif: $theme-font-type-serif;
     fontTypeScaleLg: $theme-type-scale-lg;
+
+  // Headings
+  headingSize1: $theme-h1-font-size;
+  headingSize2: $theme-h2-font-size;
+  headingSize3: $theme-h3-font-size;
+  headingSize4: $theme-h4-font-size;
+  headingSize5: $theme-h5-font-size;
+  headingSize6: $theme-h6-font-size;
+  headingLineHeight: $theme-heading-line-height;
 
     // Font weights
     fontWeightThin: $theme-font-weight-thin;
@@ -33,8 +38,30 @@
     fontWeightBold: $theme-font-weight-bold;
     fontWeightHeavy: $theme-font-weight-heavy;
 
-    // Theme Colors
-    @each $prop, $value in $assignments-theme-color {
-      $prop: $value;
-    }
+  /*
+    ------------------------------ D----------
+    Theme palette colors
+    ----------------------------------------
+  */
+
+  // Base colors
+  colorBaseFamily: $theme-color-base-family;
+  colorBaseLightest: $theme-color-base-lightest;
+  colorBaseLighter: $theme-color-base-lighter;
+  colorBaseLight: $theme-color-base-light;
+  colorBase: $theme-color-base;
+  colorBasedark: $theme-color-base-dark;
+  colorBaseDarker: $theme-color-base-darker;
+  colorBaseDarkest: $theme-color-base-darkest;
+  colorBaseInk: $theme-color-base-ink;
+
+  // Primary colors
+  colorPrimaryFamily: $theme-color-primary-family;
+  colorPrimaryLightest: $theme-color-primary-lightest;
+  colorPrimaryLighter: $theme-color-primary-lighter;
+  colorPrimaryLight: $theme-color-primary-light;
+  colorPrimary: $theme-color-primary;
+  colorPrimaryDark: $theme-color-primary-dark;
+  colorPrimaryDarker: $theme-color-primary-darker;
+  colorPrimaryDarkest: $theme-color-primary-darkest;
 }

@@ -27,9 +27,11 @@ export default {
       table: { disable: true }
     },
     typescale_h1: {
-      control: { type: 'range', min: 1, max: 20, step: 1 },
+      control: { type: 'select' },
       defaultValue: 14,
+      mapping: fontVars.systemTypeScale,
       name: 'H1 type scale',
+      options: fontVars.systemTypeScale,
       table: { disable: true }
     },
     font_token_body: {
@@ -53,6 +55,12 @@ export default {
       name: 'Body - font weight',
       options: fontVars.systemFontWeight,
       table: { disable: true }
+    },
+    text_width: {
+      control: { type: 'range', min: 1, max: 6, step: 1 },
+      defaultValue: 3,
+      name: 'Text width increments',
+      table: { disable: true },
     },
     id: {
       defaultValue: "sans",
@@ -122,6 +130,9 @@ StylePlayground.argTypes = {
   font_weight_headline: {
     table: { disable: false }
   },
+  typescale_h1: {
+    table: { disable: false }
+  },
   font_token_body: {
     table: { disable: false },
   },
@@ -129,6 +140,9 @@ StylePlayground.argTypes = {
     table: { disable: false },
   },
   font_weight_body: {
+    table: { disable: false },
+  },
+  text_width: {
     table: { disable: false },
   },
 }

@@ -2,6 +2,8 @@
 import Component from "./usa-colors.twig";
 import SystemColorList from './usa-colors~vars';
 
+console.log(SystemColorList);
+
 export default {
   title: "Tokens/Colors",
   argTypes: {
