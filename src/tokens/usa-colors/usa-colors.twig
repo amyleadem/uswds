@@ -11,8 +11,6 @@
   </p>
 </section>
 
-
-
 <section class="usa-section margin-top-2" id="color-demo"></section>
 
 {% if system_colors %}
@@ -23,7 +21,23 @@
   </section>
 {% endif %}
 
+{% if theme_colors %}
+  <section class="usa-section margin-top-2  bg-{{ theme_colors }}" id="theme-demo"></section>
+  <section class="usa-prose margin-top-2">
+    <h1>
+      Theme color family: {{ theme_colors }}
+    </h1>
+  </section>
+{% endif %}
+
 <style>
-  #color-demo { background-color: {{ system_colors }}; height: 50vh; width:
-  100%; }
+  #color-demo,
+  #theme-demo { 
+    height: 50vh; 
+    width: 100%; 
+  }
+
+  #color-demo {
+    background-color: {{ system_colors }};
+  }
 </style>
