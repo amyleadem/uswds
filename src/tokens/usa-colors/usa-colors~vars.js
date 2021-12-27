@@ -74,10 +74,11 @@ arrFamily.forEach(family => {
         const tokenNameVivid = `${colorFamily}-${colorGradeVivid}v`;
         const hexVivid = colorValuesVivid.value;
 
-        // print item and hex value to colorList
-        SystemColorList[tokenNameVivid] =  hexVivid;
+        if (hexVivid !== false ) {
+          SystemColorList[tokenNameVivid] =  hexVivid;
+        }
       }
-    } else {
+    } else if (hex !== false) {
       // print item and hex value to colorList
       SystemColorList[tokenName] =  hex;
     }
