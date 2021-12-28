@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
 import Component from "./usa-colors.twig";
 import SystemColorList from './usa-colors~vars';
-import ThemeColorList from './usa-theme-colors~vars';
+import ThemeColorList from './usa-colors-theme~vars';
 
+console.log(SystemColorList);
 
 export default {
   title: "Tokens/Colors",
@@ -53,7 +54,7 @@ ThemeColorTokens.argTypes = {
 
 export const SystemColorGrid = Template.bind({});
 SystemColorGrid.args = {
-  items: SystemColorList
+  swatches: SystemColorList
 }
 SystemColorGrid.argTypes = {
   token_type: { 
@@ -65,14 +66,14 @@ SystemColorGrid.argTypes = {
   theme_colors: {
     table: { disable: true },
   },
-  items: {
+  swatches: {
     table: { disable: true },
   },
 }
 
 export const ThemeColorGrid = Template.bind({});
 ThemeColorGrid.args = {
-  items: ThemeColorList
+  swatches: ThemeColorList
 }
 ThemeColorGrid.argTypes = {
   token_type: { 
@@ -84,7 +85,7 @@ ThemeColorGrid.argTypes = {
   theme_colors: {
     table: { disable: true },
   },
-  items: {
+  swatches: {
     table: { disable: true },
   },
 }
