@@ -33,15 +33,17 @@
 {% endif %}
 
 <section class="margin-top-2" style="display: flex; flex-wrap: wrap;">
-
  {% for item in items %}
       <div style="width: calc(100%/7);" class="margin-top-2">
-        <div class="bg-{{ item }}" style="height: 15ex; "></div>
+        <div style="height: 15ex;{% if token_type == "system" %} background-color: {{item}} {% endif %}"
+        {% if token_type == "theme" %}class="bg-{{ item }}"{% endif %} >
+        </div>
         {{ item }}
       </div>
     {% endfor %}
     </section>
 <style>
+
   #color-demo,
   #theme-demo { 
     height: 50vh; 

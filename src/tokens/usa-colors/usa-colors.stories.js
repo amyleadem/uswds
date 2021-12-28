@@ -51,7 +51,40 @@ ThemeColorTokens.argTypes = {
   }, 
 }
 
+export const SystemColorGrid = Template.bind({});
+SystemColorGrid.args = {
+  items: SystemColorList
+}
+SystemColorGrid.argTypes = {
+  token_type: { 
+    defaultValue: 'system',
+  },
+  system_colors: {
+    table: { disable: true },
+  },
+  theme_colors: {
+    table: { disable: true },
+  },
+  items: {
+    table: { disable: true },
+  },
+}
+
 export const ThemeColorGrid = Template.bind({});
 ThemeColorGrid.args = {
   items: ThemeColorList
+}
+ThemeColorGrid.argTypes = {
+  token_type: { 
+    defaultValue: 'theme',
+  },
+  system_colors: {
+    table: { disable: true },
+  },
+  theme_colors: {
+    table: { disable: true },
+  },
+  items: {
+    table: { disable: true },
+  },
 }
