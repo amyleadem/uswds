@@ -3,14 +3,12 @@ import Component from "./usa-colors.twig";
 import SystemColorList from './usa-colors~vars';
 import ThemeColorList from './usa-theme-colors~vars';
 
-console.log(ThemeColorList);
 
 export default {
   title: "Tokens/Colors",
   argTypes: {
     system_colors: {
       control: { type: 'select' },
-      defaultValue: 'blue-5',
       mapping: SystemColorList,
       name: 'System color tokens',
       options: SystemColorList,
@@ -51,4 +49,9 @@ ThemeColorTokens.argTypes = {
   theme_colors: {
     table: { disable: false },
   }, 
+}
+
+export const ThemeColorGrid = Template.bind({});
+ThemeColorGrid.args = {
+  items: ThemeColorList
 }

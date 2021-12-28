@@ -11,7 +11,6 @@
   </p>
 </section>
 
-
 {% if token_type == "system" %}
   {% if system_colors %}
     <section class="usa-prose margin-top-2">
@@ -26,14 +25,22 @@
 {% if token_type == "theme" %}
   {% if theme_colors %}
     <section class="usa-prose margin-top-2">
-      <h3>
-        {{ theme_colors }}
-      </h3>
+      <h3>{{ theme_colors }}</h3>
     </section>
     <section class="usa-section margin-top-2  bg-{{ theme_colors }}" id="theme-demo"></section>
   {% endif %}
+  
 {% endif %}
 
+<section class="margin-top-2" style="display: flex; flex-wrap: wrap;">
+
+ {% for item in items %}
+      <div style="width: calc(100%/7);" class="margin-top-2">
+        <div class="bg-{{ item }}" style="height: 15ex; "></div>
+        {{ item }}
+      </div>
+    {% endfor %}
+    </section>
 <style>
   #color-demo,
   #theme-demo { 
