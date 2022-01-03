@@ -18,6 +18,17 @@ export const systemFontFamily = {
     'verdana': 'Verdana',
 }
 
+export const typefaceList= vars.systemTypefaceTokens[0];
+export const systemTypefaces = [];
+
+for (let t = 0; t < typefaceList.mapValue.length; t += 1) {
+    const typefaceName = typefaceList.mapValue[t].name;
+    systemTypefaces.push(typefaceName);
+}
+
+export default systemTypefaces;
+
+
 export const systemFontStyle = [
     'normal',
     'italic',
@@ -34,8 +45,3 @@ export const systemFontWeight = [
     '800',
     '900',
 ]
-
-//const systemLineHeightString = vars.systemLineHeight[0].value;
-//const systemLineHeightReplace = systemLineHeightString.replace("(", "{").replace(")", "}");
-
-//export const systemLineHeight = JSON.parse(systemLineHeightReplace);

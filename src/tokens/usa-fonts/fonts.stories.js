@@ -1,17 +1,11 @@
 import Component from "./usa-fonts.twig";
 import * as fontVars from "./usa-fonts~vars";
 
-console.log(fontVars.systemLineHeight); // =>   "anotherValue"
+console.log(fontVars.systemTypefaces); // =>   "anotherValue"
 
 export default {
   title: "Tokens/Fonts",
   argTypes: {
-    line_height: {
-      control: { type: 'select' },
-      defaultValue: '1',
-      name: 'Line Height',
-      options: fontVars.systemLineHeight,
-    },
     font_token_headline: {
       control: { type: 'select' },
       defaultValue: 'Merriweather Web',
