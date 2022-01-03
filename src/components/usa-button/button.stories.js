@@ -1,6 +1,5 @@
 import Component from "./usa-button.twig";
 import SystemColorList from '../../tokens/usa-colors/usa-colors~vars';
-
 import {
   StyleAccentCool,
   StyleAccentWarm,
@@ -19,7 +18,7 @@ export default {
     text: {
       control: { type: 'text' },
       defaultValue: 'Default',
-      name: 'Custom button text',
+      name: 'Button text',
     },
     modifier: {
       name: 'Class modifier',
@@ -157,15 +156,15 @@ StylePlayground.argTypes = {
     defaultValue: '.25rem',
     name: 'Border radius (unit needed)',
   },
-  border_width: {
+  stroke_width: {
     control: { type: 'text' },
-    defaultValue: '2px',
-    name: 'Border Width (unit needed)',
+    defaultValue: '0',
+    name: 'Stroke Width (unit needed, stroke available on outline variant only)',
   },
-  border_color: {
+  stroke_color: {
     control: { type: 'select' },
     mapping: SystemColorList,
-    name: 'Border Color',
+    name: 'Stroke Color (stroke available on outline variant only)',
     options: SystemColorList,
   },
 }

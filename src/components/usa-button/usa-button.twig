@@ -33,9 +33,8 @@
   */
   .playground-mode .usa-button {
     background-color: {{ background_color }};
-    border-color: {{ border_color }};
     border-radius: {{ border_radius }};
-    box-shadow: inset 0 0 0 {{ border_width }} {{ border_color }};
+    box-shadow: inset 0 0 0 {{ stroke_width }} {{ stroke_color }};
     color: {{ text_color }};
     font-size: {{ font_size }};
   }
@@ -61,6 +60,10 @@
     background: none;
     box-shadow: none;
     color: {{ text_color_unstyled }};
+  }
+
+  .playground-mode .usa-button--outline {
+    box-shadow: inset 0 0 0 {{ stroke_width }} {{ stroke_color }};
   }
 </style>
 {% endif %}

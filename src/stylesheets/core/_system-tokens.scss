@@ -182,7 +182,9 @@ $system-font-stacks: (
 Typeface
 ----------------------------------------
 */
-
+/**
+ * @sass-export-section="systemTypefaceTokens"
+ */
 $system-typeface-tokens: (
   "system": (
     display-name: null,
@@ -338,6 +340,7 @@ $system-typeface-tokens: (
     ),
   ),
 );
+//@end-sass-export-section
 
 $all-typeface-tokens: map-merge(
   $system-typeface-tokens,
@@ -392,6 +395,9 @@ $system-measure-largest: 88ex;
 Line height
 ----------------------------------------
 */
+/**
+ * @sass-export-section="systemLineHeight"
+ */
 
 $system-line-height: (
   1: 1,
@@ -401,6 +407,7 @@ $system-line-height: (
   5: 1.62,
   6: 1.75,
 );
+//@end-sass-export-section
 
 /*
 ----------------------------------------
@@ -1190,6 +1197,9 @@ $color-white-transparent-70: get-system-color("white-transparent", 70);
 $color-white-transparent-80: get-system-color("white-transparent", 80);
 $color-white-transparent-90: get-system-color("white-transparent", 90);
 
+/**
+ * @sass-export-section="systemColorShortcodes"
+ */
 $system-color-shortcodes: (
   "transparent": transparent,
   "black": black,
@@ -1697,3 +1707,4 @@ $system-color-shortcodes: (
   "white-transparent-80": $color-white-transparent-80,
   "white-transparent-90": $color-white-transparent-90,
 );
+//@end-sass-export-section

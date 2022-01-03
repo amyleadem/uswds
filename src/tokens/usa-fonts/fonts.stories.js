@@ -1,9 +1,17 @@
 import Component from "./usa-fonts.twig";
 import * as fontVars from "./usa-fonts~vars";
 
+console.log(fontVars.systemLineHeight); // =>   "anotherValue"
+
 export default {
   title: "Tokens/Fonts",
   argTypes: {
+    line_height: {
+      control: { type: 'select' },
+      defaultValue: '1',
+      name: 'Line Height',
+      options: fontVars.systemLineHeight,
+    },
     font_token_headline: {
       control: { type: 'select' },
       defaultValue: 'Merriweather Web',
@@ -24,14 +32,6 @@ export default {
       defaultValue: '600',
       name: 'Headline - font weight',
       options: fontVars.systemFontWeight,
-      table: { disable: true }
-    },
-    typescale_h1: {
-      control: { type: 'select' },
-      defaultValue: 14,
-      mapping: fontVars.systemTypeScale,
-      name: 'H1 type scale',
-      options: fontVars.systemTypeScale,
       table: { disable: true }
     },
     font_token_body: {

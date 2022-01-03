@@ -1,4 +1,5 @@
 import typeStyles from "../../stylesheets/_export.module.scss";
+import vars from "../../data/sass-vars.json";
 
 export const TypeMono = typeStyles.fontTypeMono.replace(/["']/g, "");
 export const TypeSerif = typeStyles.fontTypeSerif.replace(/["']/g, "");
@@ -34,6 +35,7 @@ export const systemFontWeight = [
     '900',
 ]
 
-export const systemTypeScale = {
-}
+//const systemLineHeightString = vars.systemLineHeight[0].value;
+//const systemLineHeightReplace = systemLineHeightString.replace("(", "{").replace(")", "}");
 
+//export const systemLineHeight = JSON.parse(systemLineHeightReplace);

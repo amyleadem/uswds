@@ -22,11 +22,11 @@
   {% endif %}
 
   {% if swatches %}
-  <section class="margin-top-2" style="display: flex; flex-wrap: wrap;">
+  <section class="display-flex flex-wrap margin-top-2" >
     {% for key, value in swatches %}
-       <div style="width: calc(100%/7);" class="margin-top-2">
+       <div class="swatch--system margin-top-2">
         <div style="height: 15ex; background-color: {{ value }}"></div>
-        <p>{{ key }} <br/> {{ value }}</p>
+        <p>{{ key }} <br/>{{ value }}</p>
       </div>
     {% endfor %}
   </section>
@@ -42,7 +42,7 @@
   {% endif %}
 
   {% if swatches %}
-    <section class="margin-top-2" style="display: flex; flex-wrap: wrap;">
+    <section class="display-flex flex-wrap margin-top-2">
       {% for item in swatches %}
         <div style="width: calc(100%/7);" class="margin-top-2">
           <div style="height: 15ex;"class="bg-{{ item }}" ></div>
@@ -62,5 +62,41 @@
 
   #color-demo {
     background-color: {{ system_colors }};
+  }
+
+  .swatch--system > p,
+  .swatch--theme > p{
+    text-transform: capitalize;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .swatch--system > p{
+      font-size: .875rem;
+      text-transform: capitalize;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .swatch--system {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 760px){
+    .swatch--system {
+      width: calc(100%/2);
+    }
+  }
+
+  @media screen and (min-width: 760px) and (max-width: 1200px) {
+    .swatch--system {
+      width: calc(100%/3);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .swatch--system {
+      width: calc(100%/6);
+    }
   }
 </style>
