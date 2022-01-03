@@ -19,15 +19,16 @@ export const systemFontFamily = {
 }
 
 export const typefaceList= vars.systemTypefaceTokens[0];
-export const systemTypefaces = [];
+export const systemTypefaces = {};
 
 for (let t = 0; t < typefaceList.mapValue.length; t += 1) {
-    const typefaceName = typefaceList.mapValue[t].name;
-    systemTypefaces.push(typefaceName);
+    const typefaceMap = typefaceList.mapValue[t];
+    const typefaceName = typefaceMap.name;
+    const typefaceValueMap = Object.values(typefaceMap)[2];
+    const typefaceValue = Object.values(typefaceValueMap)[0];
+
+    systemTypefaces[typefaceName] = typefaceValue;
 }
-
-export default systemTypefaces;
-
 
 export const systemFontStyle = [
     'normal',

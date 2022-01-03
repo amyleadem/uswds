@@ -9,9 +9,8 @@ export default {
     font_token_headline: {
       control: { type: 'select' },
       defaultValue: 'Merriweather Web',
-      mapping: fontVars.systemFontFamily,
       name: 'Headline - font family token',
-      options: fontVars.systemFontFamily,
+      options: fontVars.systemTypefaces,
       table: { disable: true },
     },
     font_style_headline: {
