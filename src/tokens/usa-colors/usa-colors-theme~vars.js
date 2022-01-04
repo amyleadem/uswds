@@ -1,5 +1,3 @@
-
-
 const arrThemeColor = [
   'base',
   'primary',

@@ -313,18 +313,6 @@
       "compiledValue": ""
     },
     {
-      "name": "$system-type-scale",
-      "value": "( \"micro\": 10px, 1: 12px, 2: 13px, 3: 14px, 4: 15px, 5: 16px, 6: 17px, 7: 18px, 8: 20px, 9: 22px, 10: 24px, 11: 28px, 12: 32px, 13: 36px, 14: 40px, 15: 48px, 16: 56px, 17: 64px, 18: 80px, 19: 120px, 20: 140px, )",
-      "mapValue": [
-        {
-          "name": "micro",
-          "value": "10px",
-          "compiledValue": ""
-        }
-      ],
-      "compiledValue": ""
-    },
-    {
       "name": "$system-measure-smaller",
       "value": "44ex",
       "compiledValue": ""
@@ -3592,6 +3580,20 @@
         {
           "name": "italic",
           "value": "( 100: \"PublicSans-ThinItalic\", 200: \"PublicSans-ExtraLightItalic\", 300: \"PublicSans-LightItalic\", 400: \"PublicSans-Italic\", 500: \"PublicSans-MediumItalic\", 600: \"PublicSans-SemiBoldItalic\", 700: \"PublicSans-BoldItalic\", 800: \"PublicSans-ExtraBoldItalic\", 900: \"PublicSans-BlackItalic\", )",
+          "compiledValue": ""
+        }
+      ],
+      "compiledValue": ""
+    }
+  ],
+  "systemTypeScale": [
+    {
+      "name": "$system-type-scale",
+      "value": "( \"micro\": 10px, 1: 12px, 2: 13px, 3: 14px, 4: 15px, 5: 16px, 6: 17px, 7: 18px, 8: 20px, 9: 22px, 10: 24px, 11: 28px, 12: 32px, 13: 36px, 14: 40px, 15: 48px, 16: 56px, 17: 64px, 18: 80px, 19: 120px, 20: 140px, )",
+      "mapValue": [
+        {
+          "name": "micro",
+          "value": "10px",
           "compiledValue": ""
         }
       ],

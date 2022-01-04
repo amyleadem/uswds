@@ -19,15 +19,12 @@ export const systemFontFamily = {
 }
 
 export const typefaceList= vars.systemTypefaceTokens[0];
-export const systemTypefaces = {};
+export const systemTypefaces = [];
 
 for (let t = 0; t < typefaceList.mapValue.length; t += 1) {
     const typefaceMap = typefaceList.mapValue[t];
     const typefaceName = typefaceMap.name;
-    const typefaceValueMap = Object.values(typefaceMap)[2];
-    const typefaceValue = Object.values(typefaceValueMap)[0];
-
-    systemTypefaces[typefaceName] = typefaceValue;
+    systemTypefaces.push(typefaceName);
 }
 
 export const systemFontStyle = [
@@ -46,3 +43,8 @@ export const systemFontWeight = [
     '800',
     '900',
 ]
+
+
+// const lineHeightList= vars.systemLineHeight[0];
+// export const lineHeightListParsed = JSON.parse(lineHeightList);
+// export const systemLineHeight = {};*/

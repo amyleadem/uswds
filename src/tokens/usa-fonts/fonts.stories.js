@@ -1,16 +1,15 @@
 import Component from "./usa-fonts.twig";
 import * as fontVars from "./usa-fonts~vars";
 
-console.log(fontVars.systemTypefaces); // =>   "anotherValue"
-
 export default {
   title: "Tokens/Fonts",
   argTypes: {
     font_token_headline: {
+      name: 'Headline - font family token',
+
       control: { type: 'select' },
       defaultValue: 'Merriweather Web',
-      name: 'Headline - font family token',
-      options: fontVars.systemTypefaces,
+      options: fontVars.systemFontFamily,
       table: { disable: true },
     },
     font_style_headline: {
