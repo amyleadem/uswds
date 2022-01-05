@@ -163,6 +163,10 @@ $theme-font-type-icon: false;
 // language-specific
 $theme-font-type-lang: false;
 
+/**
+ * @sass-export-section="themeFontType"
+ */
+
 // monospace
 $theme-font-type-mono: "roboto-mono";
 
@@ -172,6 +176,7 @@ $theme-font-type-sans: "source-sans-pro";
 // serif
 $theme-font-type-serif: "merriweather";
 
+//@end-sass-export-section
 /*
 ----------------------------------------
 Custom font stacks

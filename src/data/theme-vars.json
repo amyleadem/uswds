@@ -920,21 +920,6 @@
       "compiledValue": ""
     },
     {
-      "name": "$theme-font-type-mono",
-      "value": "roboto-mono",
-      "compiledValue": ""
-    },
-    {
-      "name": "$theme-font-type-sans",
-      "value": "source-sans-pro",
-      "compiledValue": ""
-    },
-    {
-      "name": "$theme-font-type-serif",
-      "value": "merriweather",
-      "compiledValue": ""
-    },
-    {
       "name": "$theme-font-type-sans",
       "value": "source-sans-pro",
       "compiledValue": ""
@@ -4446,6 +4431,23 @@
     {
       "name": "$theme-link-reverse-active-color",
       "value": "white",
+      "compiledValue": ""
+    }
+  ],
+  "themeFontType": [
+    {
+      "name": "$theme-font-type-mono",
+      "value": "roboto-mono",
+      "compiledValue": ""
+    },
+    {
+      "name": "$theme-font-type-sans",
+      "value": "source-sans-pro",
+      "compiledValue": ""
+    },
+    {
+      "name": "$theme-font-type-serif",
+      "value": "merriweather",
       "compiledValue": ""
     }
   ]

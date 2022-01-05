@@ -182,7 +182,9 @@ $system-font-stacks: (
 Typeface
 ----------------------------------------
 */
-
+/**
+ * @sass-export-section="systemTypefaceTokens"
+ */
 $system-typeface-tokens: (
   "system": (
     display-name: null,
@@ -196,7 +198,7 @@ $system-typeface-tokens: (
     stack: $font-stack-georgia,
     system-font: true,
   ),
-  "helvetica": (
+  "helvetica-neue": (
     display-name: "Helvetica Neue",
     cap-height: 357px,
     stack: $font-stack-helvetica,
@@ -218,7 +220,7 @@ $system-typeface-tokens: (
     stack: $font-stack-system,
   ),
   "merriweather": (
-    display-name: "Merriweather Web",
+    display-name: "Merriweather",
     cap-height: 371px,
     stack: $font-stack-georgia,
     src: (
@@ -248,7 +250,7 @@ $system-typeface-tokens: (
     ),
   ),
   "roboto-mono": (
-    display-name: "Roboto Mono Web",
+    display-name: "Roboto Mono",
     cap-height: 380px,
     stack: $font-stack-monospace,
     src: (
@@ -278,7 +280,7 @@ $system-typeface-tokens: (
     ),
   ),
   "source-sans-pro": (
-    display-name: "Source Sans Pro Web",
+    display-name: "Source Sans Pro",
     cap-height: 340px,
     stack: $font-stack-helvetica,
     src: (
@@ -308,7 +310,7 @@ $system-typeface-tokens: (
     ),
   ),
   "public-sans": (
-    display-name: "Public Sans Web",
+    display-name: "Public Sans",
     cap-height: 362px,
     stack: $font-stack-system,
     src: (
@@ -338,11 +340,16 @@ $system-typeface-tokens: (
     ),
   ),
 );
+//@end-sass-export-section
 
+/**
+ * @sass-export-section="allTypefaceTokens"
+ */
 $all-typeface-tokens: map-merge(
   $system-typeface-tokens,
   $theme-typeface-tokens
 );
+//@end-sass-export-section
 
 /*
 ----------------------------------------

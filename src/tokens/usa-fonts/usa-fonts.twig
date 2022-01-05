@@ -1,0 +1,36 @@
+{% if 'true' in playground_mode %}
+<div class="playground-mode">
+{% endif %}
+
+  <section class="usa-prose usa-{{ id }} measure-{{ text_width }}">
+      {% include '../../components/usa-type-setting/usa-type-setting--font-demo.twig' with {'headline': font_family_headline} %}
+  </section>
+
+/*
+  These styles are added for storybook demonstration only
+*/
+
+ <style>
+  h1 {
+   text-transform: capitalize;
+  }
+
+  .usa-prose * {
+    font-family: {{ font_family_body }}!important;
+    font-style: {{ font_style_body }}!important;
+    font-weight: {{ font_weight_body }}!important;
+  }
+
+  {% if playground_mode %}
+    .playground-mode h1 {
+      font-size: {{typescale_h1 }}!important;
+    }
+
+    .playground-mode .usa-prose > * {
+      max-width: none;
+    }
+    {% endif %}
+
+  </style>
+
+</div>
