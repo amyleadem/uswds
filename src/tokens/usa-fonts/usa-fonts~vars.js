@@ -7,7 +7,7 @@ export const systemTypefaces = [];
 
 for (let t = 0; t <  systemTypefaceList.mapValue.length; t += 1) {
     const typefaceMap =  systemTypefaceList.mapValue[t];
-    const typefaceName = typefaceMap.name;
+    const typefaceName = typefaceMap.name.replaceAll("-"," ");
     systemTypefaces.push(typefaceName);
 }
 

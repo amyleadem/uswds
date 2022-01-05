@@ -6,20 +6,34 @@
       {% include '../../components/usa-type-setting/usa-type-setting--font-demo.twig' with {'headline': font_family_headline} %}
   </section>
 
-/*
-  These styles are added for storybook demonstration only
-*/
-
+{# These styles are added for storybook demonstration only #}
  <style>
   h1 {
    text-transform: capitalize;
   }
 
-  .usa-prose * {
-    font-family: {{ font_family_body }}!important;
-    font-style: {{ font_style_body }}!important;
-    font-weight: {{ font_weight_body }}!important;
-  }
+    .usa-prose a,
+    p,
+    li,
+    span,
+    td,
+    th,
+    tt {
+        font-family: {{ font_family_body }}!important;
+        font-style: {{ font_style_body }}!important;
+        font-weight: {{ font_weight_body }}!important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+      font-family: {{ font_family_headline }}!important;
+      font-style: {{ font_style_headline }}!important;
+      font-weight: {{ font_weight_headline }}!important;
+    }
 
   {% if playground_mode %}
     .playground-mode h1 {
@@ -29,8 +43,9 @@
     .playground-mode .usa-prose > * {
       max-width: none;
     }
-    {% endif %}
-
+ {% endif %}
   </style>
 
+{% if playground_mode %}
 </div>
+{% endif %}

@@ -30,7 +30,7 @@ export default {
     font_family_body: {
       control: { type: 'select' },
       defaultValue: 'Source Sans Pro',
-      mapping: vars.systemTypefaces,
+      mapping: vars.themeFontsList,
       name: 'Body - font family token',
       options: vars.systemTypefaces,
       table: { disable: true },
