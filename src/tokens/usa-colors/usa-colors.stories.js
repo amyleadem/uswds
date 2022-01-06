@@ -1,5 +1,4 @@
 import Component from "./usa-colors.twig";
-import Docs from "./docs/index.mdx";
 import {
   SystemColorList,
   ThemeColorList,
@@ -37,9 +36,6 @@ export default {
   },
   parameters: {
     layout: 'fullscreen',
-    docs: {
-      page: Docs,
-    },
   },
 };
 
