@@ -356,7 +356,9 @@ $all-typeface-tokens: map-merge(
 Typescale
 ----------------------------------------
 */
-
+/**
+ * @sass-export-section="systemTypeScale"
+ */
 $system-type-scale: (
   "micro": 10px,
   1: 12px,
@@ -380,6 +382,7 @@ $system-type-scale: (
   19: 120px,
   20: 140px,
 );
+//@end-sass-export-section
 
 /*
 ----------------------------------------

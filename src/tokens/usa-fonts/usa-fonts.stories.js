@@ -1,6 +1,7 @@
 import Component from "./usa-fonts.twig";
 import * as vars from "./usa-fonts~vars";
-console.log(vars.themeFontSerif);
+
+console.log(vars.systemTypeScale);
 console.log(vars.systemTypefaces);
 
 export default {
@@ -48,6 +49,12 @@ export default {
       name: 'Body - font weight',
       options: vars.systemFontWeight,
       table: { disable: true }
+    },
+    font_scale_body: {
+        control: { type: 'select' },
+        defaultValue: '10',
+        name: 'Body - type scale',
+        options: vars.systemTypeScale,
     },
     text_width: {
       control: { type: 'range', min: 1, max: 6, step: 1 },
