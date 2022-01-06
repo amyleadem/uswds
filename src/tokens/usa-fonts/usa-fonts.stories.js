@@ -48,13 +48,7 @@ export default {
       defaultValue: '400',
       name: 'Body - font weight',
       options: vars.systemFontWeight,
-      table: { disable: true }
-    },
-    font_scale_body: {
-        control: { type: 'select' },
-        defaultValue: '10',
-        name: 'Body - type scale',
-        options: vars.systemTypeScale,
+      table: { disable: true },
     },
     text_width: {
       control: { type: 'range', min: 1, max: 6, step: 1 },
@@ -65,11 +59,6 @@ export default {
     id: {
       defaultValue: "sans",
       name: 'Theme font family',
-      table: { disable: true },
-    },
-    playground_mode: {
-      control: { type: 'boolean' },
-      defaultValue: 'false',
       table: { disable: true },
     },
   },
@@ -118,31 +107,86 @@ ThemeSerif.argTypes = {
 
 export const StylePlayground = Template.bind({});
 StylePlayground.argTypes = {
-  playground_mode: {
-    defaultValue: 'true',
-  },
-  font_family_headline: {
-    table: { disable: false },
-  },
-  font_style_headline: {
-    table: { disable: false }
-  },
-  font_weight_headline: {
-    table: { disable: false }
-  },
-  typescale_h1: {
-    table: { disable: false }
-  },
-  font_family_body: {
-    table: { disable: false },
-  },
-  font_style_body: {
-    table: { disable: false },
-  },
-  font_weight_body: {
-    table: { disable: false },
-  },
-  text_width: {
-    table: { disable: false },
-  },
+    playground_mode: {
+        control: { type: 'boolean' },
+        defaultValue: true,
+        table: { disable: true },
+    },
+    font_family_headline: {
+        table: { disable: false },
+    },
+    font_style_headline: {
+        table: { disable: false }
+    },
+    font_weight_headline: {
+        table: { disable: false }
+    },
+    typescale_h1: {
+        control: { type: 'select' },
+        defaultValue: '14',
+        mapping: vars.systemTypeScale,
+        name: 'h1 - type scale',
+        options: vars.systemTypeScale,
+    },
+    typescale_h2: {
+        control: { type: 'select' },
+        defaultValue: '12',
+        mapping: vars.systemTypeScale,
+        name: 'h2 - type scale',
+        options: vars.systemTypeScale,
+    },
+    typescale_h3: {
+        control: { type: 'select' },
+        defaultValue: '9',
+        mapping: vars.systemTypeScale,
+        name: 'h3 - type scale',
+        options: vars.systemTypeScale,
+    },
+    typescale_h4: {
+        control: { type: 'select' },
+        defaultValue: '5',
+        mapping: vars.systemTypeScale,
+        name: 'h4 - type scale',
+        options: vars.systemTypeScale,
+    },
+    typescale_h5: {
+        control: { type: 'select' },
+        defaultValue: '4',
+        mapping: vars.systemTypeScale,
+        name: 'h5 - type scale',
+        options: vars.systemTypeScale,
+    },
+    typescale_h6: {
+        control: { type: 'select' },
+        defaultValue: '2',
+        mapping: vars.systemTypeScale,
+        name: 'h6 - type scale',
+        options: vars.systemTypeScale,
+    },
+    typescale_lead: {
+        control: { type: 'select' },
+        defaultValue: '9',
+        mapping: vars.systemTypeScale,
+        name: 'Lead - type scale',
+        options: vars.systemTypeScale,
+    },
+    typescale_body: {
+        control: { type: 'select' },
+        defaultValue: '5',
+        mapping: vars.systemTypeScale,
+        name: 'Body - type scale',
+        options: vars.systemTypeScale,
+    },
+    font_family_body: {
+        table: { disable: false },
+    },
+    font_style_body: {
+        table: { disable: false },
+    },
+    font_weight_body: {
+        table: { disable: false },
+    },
+    text_width: {
+        table: { disable: false },
+    },
 }

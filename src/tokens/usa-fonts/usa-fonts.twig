@@ -1,4 +1,4 @@
-{% if 'true' in playground_mode %}
+{% if playground_mode %}
 <div class="playground-mode">
 {% endif %}
 
@@ -8,9 +8,9 @@
 
 {# These styles are added for storybook demonstration only #}
  <style>
-  h1 {
-   text-transform: capitalize;
-  }
+    h1 {
+        text-transform: capitalize;
+    }
 
     .usa-prose a,
     p,
@@ -19,6 +19,7 @@
     td,
     th,
     tt {
+        color: {{ font_color_body }}!important;
         font-family: {{ font_family_body }}!important;
         font-style: {{ font_style_body }}!important;
         font-weight: {{ font_weight_body }}!important;
@@ -30,6 +31,7 @@
     h4,
     h5,
     h6{
+      color: {{ font_color_headline }}!important;
       font-family: {{ font_family_headline }}!important;
       font-style: {{ font_style_headline }}!important;
       font-weight: {{ font_weight_headline }}!important;
@@ -37,7 +39,41 @@
 
   {% if playground_mode %}
     .playground-mode h1 {
-      font-size: {{typescale_h1 }}!important;
+      font-size: {{ typescale_h1 }}!important;
+    }
+
+    .playground-mode h2 {
+      font-size: {{ typescale_h2 }}!important;
+    }
+
+    .playground-mode h3 {
+      font-size: {{ typescale_h3 }}!important;
+    }
+
+    .playground-mode h4 {
+      font-size: {{ typescale_h4 }}!important;
+    }
+
+    .playground-mode h5 {
+      font-size: {{ typescale_h5 }}!important;
+    }
+
+    .playground-mode h6 {
+      font-size: {{ typescale_h6 }}!important;
+    }
+
+    .playground-mode .usa-intro {
+      font-size: {{ typescale_lead }}!important;
+    }
+
+    .playground-mode a,
+    .playground-mode li,
+    .playground-mode p,
+    .playground-mode span,
+    .playground-mode td,
+    .playground-mode th,
+    .playground-mode tt {
+      font-size: {{ typescale_body }}!important;
     }
 
     .playground-mode .usa-prose > * {

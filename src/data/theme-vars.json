@@ -1142,51 +1142,6 @@
       "compiledValue": ""
     },
     {
-      "name": "$theme-h1-font-size",
-      "value": "2xl",
-      "compiledValue": ""
-    },
-    {
-      "name": "$theme-h2-font-size",
-      "value": "xl",
-      "compiledValue": ""
-    },
-    {
-      "name": "$theme-h3-font-size",
-      "value": "lg",
-      "compiledValue": ""
-    },
-    {
-      "name": "$theme-h4-font-size",
-      "value": "sm",
-      "compiledValue": ""
-    },
-    {
-      "name": "$theme-h5-font-size",
-      "value": "xs",
-      "compiledValue": ""
-    },
-    {
-      "name": "$theme-h6-font-size",
-      "value": "3xs",
-      "compiledValue": ""
-    },
-    {
-      "name": "$theme-heading-line-height",
-      "value": "2",
-      "compiledValue": ""
-    },
-    {
-      "name": "$theme-small-font-size",
-      "value": "2xs",
-      "compiledValue": ""
-    },
-    {
-      "name": "$theme-display-font-size",
-      "value": "3xl",
-      "compiledValue": ""
-    },
-    {
       "name": "$theme-text-measure-narrow",
       "value": "1",
       "compiledValue": ""
@@ -4448,6 +4403,53 @@
     {
       "name": "$theme-font-type-serif",
       "value": "merriweather",
+      "compiledValue": ""
+    }
+  ],
+  "themeHeadingSize": [
+    {
+      "name": "$theme-h1-font-size",
+      "value": "2xl",
+      "compiledValue": ""
+    },
+    {
+      "name": "$theme-h2-font-size",
+      "value": "xl",
+      "compiledValue": ""
+    },
+    {
+      "name": "$theme-h3-font-size",
+      "value": "lg",
+      "compiledValue": ""
+    },
+    {
+      "name": "$theme-h4-font-size",
+      "value": "sm",
+      "compiledValue": ""
+    },
+    {
+      "name": "$theme-h5-font-size",
+      "value": "xs",
+      "compiledValue": ""
+    },
+    {
+      "name": "$theme-h6-font-size",
+      "value": "3xs",
+      "compiledValue": ""
+    },
+    {
+      "name": "$theme-heading-line-height",
+      "value": "2",
+      "compiledValue": ""
+    },
+    {
+      "name": "$theme-small-font-size",
+      "value": "2xs",
+      "compiledValue": ""
+    },
+    {
+      "name": "$theme-display-font-size",
+      "value": "3xl",
       "compiledValue": ""
     }
   ]
